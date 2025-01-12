@@ -1,0 +1,99 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .container-profile {
+    margin-top: -250px;
+    line-height: 120px;
+
+    .main-name {
+      margin-top: 50px;
+      font-size: 50px;
+    }
+
+    .sub-name {
+      font-size: 80px;
+    }
+
+    .position {
+      font-size: 30px;
+      color: gray;
+    }
+
+    .container-loading {
+      h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        letter-spacing: 0.1rem;
+        overflow: hidden;
+        margin: 0;
+
+        span.typed-text {
+          font-weight: normal;
+          background: linear-gradient(
+            90deg,
+            #dd7732,
+            #f39c12,
+            #ff6347,
+            #dd7732
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          animation: gradient-shift 3s infinite;
+          color: #dd7732;
+        }
+
+        span.cursor {
+          display: inline-block;
+          background-color: #ccc;
+          margin-left: 0.1rem;
+          width: 3px;
+          animation: blink 1s infinite;
+
+          &.typing {
+            animation: none;
+          }
+        }
+      }
+      .button-cv {
+        .btn-resume {
+          background-color: #dd7732;
+          border: none;
+          padding: 10px 20px;
+          font-size: 20px;
+          border-radius: 15px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          a {
+            color: white;
+            text-decoration: none;
+          }
+
+          &:hover {
+            background-color: #f39c12;
+          }
+        }
+      }
+    }
+  }
+
+  .img-profile {
+    margin-top: 100px;
+  }
+
+  @keyframes blink {
+    0%,
+    49% {
+      background-color: #ccc;
+    }
+    50%,
+    99% {
+      background-color: transparent;
+    }
+    100% {
+      background-color: #ccc;
+    }
+  }
+}
