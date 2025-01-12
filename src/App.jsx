@@ -3,8 +3,6 @@ import Home from "./page/Home";
 import Contact from "./page/Contact";
 import About from "./page/About";
 import Header from "./component/header/Header";
-// import Home from "./page/Home"
-import LoadingWord from "./component/home/LoadingWord";
 import "./index.scss";
 
 const App = () => {

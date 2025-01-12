@@ -87,6 +87,7 @@ const LoadingWord = () => {
             src="https://htmldemo.net/lendex/lendex/assets/images/portrait/portrait-hero.png"
             alt="profile"
           />
+          <button type="button" className="btn btn-dark">Dark</button>
         </div>
       </div>
     </>
