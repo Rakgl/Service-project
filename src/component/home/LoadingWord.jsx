@@ -65,7 +65,7 @@ const LoadingWord = () => {
         <div className="container-profile">
           <h2 className="main-name">Hello, I’m</h2>
           <h1 className="sub-name">Kosal Linnorak</h1>
-          <h3 className="position">Software Developer</h3>
+          <h3 className="position"> Developer</h3>
           <div className="container-loading">
             <h1>
               Coding is <span ref={typedTextRef} className="typed-text"></span>
