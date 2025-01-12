@@ -76,7 +76,7 @@ const LoadingWord = () => {
             <div className="button-cv">
               <button className="btn-resume">
                 <a href="#" download>
-                  Get Resume
+                  Get Resum
                 </a>
               </button>
             </div>
