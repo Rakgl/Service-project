@@ -1,9 +1,14 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Home from "./page/Home";
-import Contact from "./page/Contact";
-import About from "./page/About";
-import Header from "./component/header/Header";
-import "./index.scss";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from 'react-router-dom';
+import Home from './page/Home';
+import Contact from './page/Contact';
+import About from './page/About';
+import Header from './component/header/Header';
+import './index.scss';
 
 const App = () => {
   return (

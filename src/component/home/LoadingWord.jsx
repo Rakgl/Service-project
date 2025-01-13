@@ -1,13 +1,11 @@
-import React, { useEffect, useRef } from "react";
-import "./LoadingStyle.scss";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import React, { useEffect, useRef } from 'react';
+import './LoadingStyle.scss';
 
 const LoadingWord = () => {
   const typedTextRef = useRef(null);
   const cursorRef = useRef(null);
 
-  const textArray = ["hard", "", "a journey", ""];
+  const textArray = ['hard', '', 'a journey', ''];
   const typingDelay = 150;
   const erasingDelay = 100;
   const newTextDelay = 2000;
@@ -22,32 +20,32 @@ const LoadingWord = () => {
 
     const type = () => {
       if (charIndex < textArray[textArrayIndex].length) {
-        if (!cursorSpan.classList.contains("typing")) {
-          cursorSpan.classList.add("typing");
+        if (!cursorSpan.classList.contains('typing')) {
+          cursorSpan.classList.add('typing');
         }
         typedTextSpan.textContent +=
           textArray[textArrayIndex].charAt(charIndex);
         charIndex++;
         setTimeout(type, typingDelay);
       } else {
-        cursorSpan.classList.remove("typing");
+        cursorSpan.classList.remove('typing');
         setTimeout(erase, newTextDelay);
       }
     };
 
     const erase = () => {
       if (charIndex > 0) {
-        if (!cursorSpan.classList.contains("typing")) {
-          cursorSpan.classList.add("typing");
+        if (!cursorSpan.classList.contains('typing')) {
+          cursorSpan.classList.add('typing');
         }
         typedTextSpan.textContent = textArray[textArrayIndex].substring(
           0,
-          charIndex - 1
+          charIndex - 1,
         );
         charIndex--;
         setTimeout(erase, erasingDelay);
       } else {
-        cursorSpan.classList.remove("typing");
+        cursorSpan.classList.remove('typing');
         textArrayIndex++;
         if (textArrayIndex >= textArray.length) textArrayIndex = 0;
         setTimeout(type, typingDelay + 1100);
@@ -87,7 +85,6 @@ const LoadingWord = () => {
             src="https://htmldemo.net/lendex/lendex/assets/images/portrait/portrait-hero.png"
             alt="profile"
           />
-          <button type="button" className="btn btn-dark">Dark</button>
         </div>
       </div>
     </>

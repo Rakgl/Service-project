@@ -1,7 +1,5 @@
 const RunningNum = () => {
-  return (
-    <div>RunningNum</div>
-  )
-}
+  return <div>RunningNum</div>;
+};
 
-export default RunningNum
+export default RunningNum;
