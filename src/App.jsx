@@ -1,29 +1,14 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from 'react-router-dom';
-import Home from './page/Home';
-import Contact from './page/Contact';
-import About from './page/About';
-import Header from './component/header/Header';
-import './index.scss';
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import RouterComponent from './router/RouterComponent';
+import './styles/index.scss';
+
 
 const App = () => {
   return (
-    <>
-      <Router>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          {/* Redirect any unknown path to Home */}
-          <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
-      </Router>
-    </>
+    <Router>
+      <RouterComponent />
+    </Router>
   );
 };
 

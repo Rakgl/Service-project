@@ -11,7 +11,7 @@ const Header = () => {
       <nav>
         <div className="nav-content">
           <div className="logo">
-            <Link to="/app">Webster</Link>
+            <Link className="logo-img" to="/app">IT service</Link>
           </div>
 
           <ul className="nav-links">
@@ -22,7 +22,6 @@ const Header = () => {
               <Link to="/contact">Contact</Link>
             </li>
           </ul>
-
           <select id="theme-selector" onChange={saveTheme}>
             <option value="light">Light</option>
             <option value="dark">Dark</option>
@@ -56,5 +55,6 @@ function applyTheme(theme) {
     document.body.style.backgroundColor = 'white';
   }
 }
+
 
 export default Header;
