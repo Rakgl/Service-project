@@ -1,27 +1,27 @@
+@use '../../styles/variables' as *;
+
 nav {
   top: 0;
   left: 0;
   width: 100%;
   padding: 0px;
   transition: all 0.4s ease;
-  background: darkgrey;
+  background: $primary-color;
   position: sticky;
   height: 80px;
 
   .nav-content {
     height: 100%;
-    max-width: 1200px;
-    margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     .logo {
-      a {
+      .logo-img {
         font-weight: 500;
         font-size: 35px;
-        color: black;
-
+        color: $text-color;
+        text-decoration: none;
         // Change color when nav is sticky
         @at-root nav.sticky & {
           color: white;
@@ -37,15 +37,15 @@ nav {
 
         a {
           text-decoration: none;
-          color: black;
+          color: $muted-text-color;
           font-size: 18px;
           font-weight: 500;
           padding: 10px 4px;
           transition: all 0.3s ease;
 
           &:hover {
-            color: #fecd03; // Change text color on hover
-            transform: scale(1.1); // Slightly enlarge the element
+            color: $muted-text-color; 
+            transform: scale(1.1);
           }
 
           // Change color when nav is sticky
