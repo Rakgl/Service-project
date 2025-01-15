@@ -1,5 +1,7 @@
+
 import CarouselCard from '../component/home/carouselCard/CarouselCard';
 import LoadingWord from '../component/home/loadingword/LoadingWord';
+
 
 const HomePage = () => {
   return (
