@@ -1,10 +1,10 @@
-import CarouselCard from '../component/home/CarouselCard';
-import LoadingWord from '../component/home/LoadingWord';
+import CarouselCard from '../component/home/carouselCard/CarouselCard';
+import LoadingWord from '../component/home/loadingword/LoadingWord';
 
 const HomePage = () => {
   return (
     <>
-      <div>
+      <div className="px-10">
         <LoadingWord />
         <CarouselCard />
       </div>

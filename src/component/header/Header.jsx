@@ -8,7 +8,7 @@ const Header = () => {
   }, []);
   return (
     <>
-      <nav>
+      <nav className="px-10">
         <div className="nav-content">
           <div className="logo">
             <Link className="logo-img" to="/app">IT service</Link>
@@ -19,7 +19,19 @@ const Header = () => {
               <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link to="/service">Service</Link>
+            </li>
+            <li>
+              <Link to="/portfolio">Protfolio</Link>
+            </li>
+            <li>
+              <Link to="/blog">Blog</Link>
+            </li>
+            <li>
+              <Link to="/pages">Pages</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact Us</Link>
             </li>
           </ul>
           <select id="theme-selector" onChange={saveTheme}>
