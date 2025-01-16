@@ -3,9 +3,14 @@ import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-// import './styles.css';
-import { Pagination } from 'swiper/modules';
-
+import { Autoplay } from 'swiper/modules';
+import img1 from "../../../assets/home/1-white.png"
+import img2 from "../../../assets/home/2-white.png"
+import img3 from "../../../assets/home/3-white.png"
+import img4 from "../../../assets/home/4-white.png"
+import img5 from "../../../assets/home/5-white.png"
+import img6 from "../../../assets/home/6-white.png"
+import img7 from "../../../assets/home/7-white.png"
 const CarouselCard = () => {
   return (
     <>
@@ -13,11 +18,14 @@ const CarouselCard = () => {
         <h1>Trusted By Over 500 Clients Around The World</h1>
         <div>
             <Swiper
-            slidesPerView={1}
-            spaceBetween={10}
-            pagination={{
-              clickable: true,
+            modules={[Autoplay]}
+             slidesPerView="auto"
+            autoplay={{
+              delay: 3000, // Time between slides (in ms)
+              disableOnInteraction: false, // Continue auto-sliding after user interaction
             }}
+            spaceBetween={10}
+            loop={true}
             breakpoints={{
               640: {
                 slidesPerView: 2,
@@ -28,22 +36,34 @@ const CarouselCard = () => {
                 spaceBetween: 30,
               },
               1024: {
-                slidesPerView: 5,
-                spaceBetween: 40,
+                slidesPerView: 6,
+                spaceBetween: 37,
               },
             }}
-            modules={[Pagination]}
             className="mySwiper"
           >
-            <SwiperSlide>Slide 1</SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
-            <SwiperSlide>Slide 5</SwiperSlide>
-            <SwiperSlide>Slide 6</SwiperSlide>
-            <SwiperSlide>Slide 7</SwiperSlide>
-            <SwiperSlide>Slide 8</SwiperSlide>
-            <SwiperSlide>Slide 9</SwiperSlide>
+           
+           <SwiperSlide>
+              <img src={img1} alt="" className='imgSwiper'/>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={img2} alt="" className='imgSwiper'/>
+              </SwiperSlide>
+            <SwiperSlide>
+              <img src={img3} alt="" className='imgSwiper'/>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={img4} alt="" className='imgSwiper'/>
+              </SwiperSlide>
+            <SwiperSlide>
+              <img src={img5} alt="" className='imgSwiper'/>
+              </SwiperSlide>
+            <SwiperSlide>
+              <img src={img6} alt="" className='imgSwiper'/>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={img7} alt="" className='imgSwiper'/>
+              </SwiperSlide>
           </Swiper>
         </div>
       </div>
