@@ -1,13 +1,12 @@
 
 import CarouselCard from '../component/home/carouselCard/CarouselCard';
-import LoadingWord from '../component/home/loadingword/LoadingWord';
-
+import MainBanner from '../component/home/main-banner/banner';
 
 const HomePage = () => {
   return (
     <>
-      <div className="px-10">
-        <LoadingWord />
+      <div>
+        <MainBanner/>
         <CarouselCard />
       </div>
     </>

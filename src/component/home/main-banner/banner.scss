@@ -1,0 +1,211 @@
+// background
+@use "sass:math";
+@use "sass:string";
+
+@mixin translate50 {
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@mixin roundedCorners {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+@mixin rotateBase {
+  -webkit-transform: rotate3d(-1, 1, 0, 0deg);
+  -ms-transform: rotate3d(-1, 1, 0, 0deg);
+  -o-transform: rotate3d(-1, 1, 0, 0deg);
+  transform: rotate3d(-1, 1, 0, 0deg);
+}
+
+@mixin rotateRight {
+  -webkit-transform: rotate3d(-1, 1, 0, 30deg);
+  -ms-transform: rotate3d(-1, 1, 0, 30deg);
+  -o-transform: rotate3d(-1, 1, 0, 30deg);
+  transform: rotate3d(-1, 1, 0, 30deg);
+}
+
+@mixin rotateLeft {
+  -webkit-transform: rotate3d(-1, 1, 0, -30deg);
+  -ms-transform: rotate3d(-1, 1, 0, -30deg);
+  -o-transform: rotate3d(-1, 1, 0, -30deg);
+  transform: rotate3d(-1, 1, 0, -30deg);
+}
+
+// Star generation function
+@function generateStars($n) {
+  $value: '0 #{math.random(2000)}px #{math.random(2000)}px #FFF';
+
+  @for $i from 2 through $n {
+    $value: '#{$value} , #{math.random(2000)}px #{math.random(2000)}px #FFF';
+  }
+
+  @return string.unquote($value);
+}
+
+$stars-small: generateStars(700);
+$stars-medium: generateStars(200);
+$stars-big: generateStars(100);
+// background
+.row{
+  --bs-gutter-x: 0rem !important;
+}
+.main-banner{
+    height: 800px;
+    position: relative;
+    overflow: hidden;
+    #stars-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: radial-gradient(ellipse at bottom, #171A34 0%, #171A34 100%);
+      z-index: -1;
+    }
+  
+    #stars,
+    #stars2,
+    #stars3 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: transparent;
+      @include roundedCorners;
+    }
+
+    #stars {
+      width: 1px;
+      height: 1px;
+      box-shadow: $stars-small;
+      animation: animateStars 28.5s ease-in-out infinite;
+    }
+
+    #stars2 {
+      width: 2px;
+      height: 2px;
+      box-shadow: $stars-medium;
+      animation: animateStars 30s ease-in-out infinite;
+    }
+
+    #stars3 {
+      width: 3px;
+      height: 3px;
+      box-shadow: $stars-big;
+      animation: animateStars 31.5s ease-in-out infinite;
+    }
+  
+    @keyframes animateStars {
+      0% {
+        @include rotateBase;
+      }
+      25% {
+        @include rotateRight;
+      }
+      50% {
+        @include rotateBase;
+      }
+      75% {
+        @include rotateLeft;
+      }
+      100% {
+        @include rotateBase;
+      }
+    }
+
+    .banner-side {
+        h6{
+          color: #09AFF4;
+          margin-bottom: 0;
+        }
+        h1{
+          margin-top: 0px;
+          color: white;
+          font-size: 70px;
+          font-weight: 900;
+        }
+        p{
+          width: 550px;
+          font-size: 20px;
+          color: #BCBCC4;
+        }
+        .image-holder {
+          width: 655px;
+          height: 655px;
+          border-radius: 100%;
+          border: 2px solid #13547E;
+          position: relative;
+          perspective: 1000px;
+          transform-style: preserve-3d;
+          transform-origin: center;
+          transition: transform 0.05s ease-out;
+          img {
+            position: absolute;
+            z-index: 2;
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+      
+          .orb {
+            position: absolute;
+            z-index: 1;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: rgb(0, 0, 255);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            will-change: transform;
+          }
+        }
+
+        .big-letter{
+          img{
+            margin-top: -20px;
+            width: 320px;
+          }
+        }
+
+        .line-icon{
+          color: white;
+          width: 170px;
+          font-size: 22px;
+        }
+
+        .btn-outline-primary{
+          border-color: #09AFF4;
+          color: #09AFF4;
+          font-size: 15px;
+          border: 2px solid #09AFF4; 
+          border-radius: 0 20px 0 20px;
+          height: 50px;
+          width: 170px;
+          font-weight: 700;
+          &:hover{
+            background-color: #09AFF4;
+            color: white;
+          }
+        }
+
+        .round-button{
+          width: 50px;
+          height: 50px;
+          border-radius: 100%;
+          margin-left: 20px;
+          border: 2px solid #09AFF4;
+          background-color: #09AFF4;
+          color: white;
+        }
+      }
+}
+
+.pt-10 {
+    padding-top: 170px;
+}
