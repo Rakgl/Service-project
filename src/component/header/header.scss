@@ -1,62 +1,59 @@
+@use '../../styles/variables' as *;
+
 nav {
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 0px;
-    transition: all 0.4s ease;
-    background: darkgrey;
-    position:sticky;
-    height: 80px;
-  
-    .nav-content {
-      height: 100%;
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-  
-      .logo {
-        a {
-          font-weight: 500;
-          font-size: 35px;
-          color: black;
-  
-          // Change color when nav is sticky
-          @at-root nav.sticky & {
-            color: white;
-          }
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0px;
+  transition: all 0.4s ease;
+  background: $primary-color;
+  position: sticky;
+  height: 80px;
+
+  .nav-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      .logo-img {
+        font-weight: 500;
+        font-size: 35px;
+        color: $text-color;
+        text-decoration: none;
+        // Change color when nav is sticky
+        @at-root nav.sticky & {
+          color: white;
         }
       }
-  
-      .nav-links {
-        display: flex;
-        li {
-          list-style: none;
-          margin: 0 8px;
-  
-          a {
-            text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      li {
+        list-style: none;
+        margin: 0 8px;
+
+        a {
+          text-decoration: none;
+          color: $muted-text-color;
+          font-size: 18px;
+          font-weight: 500;
+          padding: 10px 4px;
+          transition: all 0.3s ease;
+
+          &:hover {
+            color: $muted-text-color; 
+            transform: scale(1.1);
+          }
+
+          // Change color when nav is sticky
+          @at-root nav.sticky & {
             color: black;
-            font-size: 18px;
-            font-weight: 500;
-            padding: 10px 4px;
-            transition: all 0.3s ease;
-  
-            &:hover {
-              color: #fecd03; // Change text color on hover
-              transform: scale(1.1); // Slightly enlarge the element
-            }
-  
-            // Change color when nav is sticky
-            @at-root nav.sticky & {
-              color: black;
-  
-  
-            }
           }
         }
       }
     }
   }
-  
+}
