@@ -51,7 +51,9 @@ $stars-small: generateStars(700);
 $stars-medium: generateStars(200);
 $stars-big: generateStars(100);
 // background
-
+.row{
+  --bs-gutter-x: 0rem !important;
+}
 .main-banner{
     height: 800px;
     position: relative;
