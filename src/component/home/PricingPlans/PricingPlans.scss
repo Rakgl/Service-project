@@ -1,0 +1,159 @@
+$primary-color: #ffffff;
+$background-color: #0f172a;
+$card-bg: #1e293b;
+$highlight-bg: #3b82f6;
+$accent-color: #3b82f6;
+$text-color-light: #94a3b8;
+$button-bg: transparent;
+$button-border: #3b82f6;
+$button-text: #ffffff;
+$badge-bg: #3b83f6e3;
+
+.pricing-plans {
+  background-color: $background-color;
+  color: $primary-color;
+  text-align: center;
+  padding: 64px 32px;
+
+.section-title {
+font-size: 36px;
+margin-bottom: 16px;
+}
+
+.section-description {
+margin-bottom: 32px;
+color: $text-color-light;
+font-size: 18px;
+}
+
+.plans-container {
+display: flex;
+justify-content: center;
+gap: 16px;
+flex-wrap: wrap;
+
+.plan-card {
+    background-color: $card-bg;
+    padding: 24px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+    transform: translateY(-10px);
+    }
+
+    &.popular {
+    background-color: $highlight-bg;
+    }
+
+    .plan-header {
+    position: relative;
+
+    .badge {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: $badge-bg;
+        color: $primary-color;
+        padding: 4px 8px;
+        border-radius: 0 0 0 8px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    }
+
+    .plan-title {
+    font-size: 24px;
+    margin: 16px 0;
+    font-weight: bold;
+    }
+
+    .price {
+    font-size: 36px;
+    margin: 16px 0;
+    font-weight: bold;
+
+    span {
+        display: block;
+        font-size: 16px;
+        color: $text-color-light;
+    }
+    }
+
+    .plan-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 16px;
+    color: $text-color-light;
+    font-size: 14px;
+
+    li {
+        margin: 8px 0;
+    }
+    }
+
+    .select-plan {
+    background-color: $button-bg;
+    color: $button-text;
+    border: 2px solid $button-border;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: $button-border;
+        color: $primary-color;
+    }
+    }
+}
+}
+}
+@media (max-width: 768px) {
+    .plans-container {
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .plan-card {
+    width: 100%;
+    }
+}
+@media (max-width: 480px) {
+    .section-title {
+      font-size: 28px;
+    }
+  
+    .section-description {
+      font-size: 16px;
+    }
+  
+    .plan-card {
+      padding: 16px;
+    }
+  
+    .price {
+      font-size: 32px;
+  
+      span {
+        font-size: 14px;
+      }
+    }
+  
+    .plan-title {
+      font-size: 20px;
+    }
+  
+    .plan-features {
+      font-size: 12px;
+    }
+  
+    .select-plan {
+      padding: 10px 20px;
+    }
+  }
