@@ -1,69 +1,108 @@
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import './header.scss';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import './header.scss'; 
 import LogoDark from '../../assets/logo-dark.png';
 import LogoLight from '../../assets/logo-light.png';
 
 const Header = () => {
   const [theme, setTheme] = useState('light');
+  const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation(); 
+    
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') || 'light';
     setTheme(savedTheme);
-    applyTheme(savedTheme);
+    document.body.className = savedTheme;
   }, []);
 
-  const saveTheme = (event) => {
-    const selectedTheme = event.target.value;
-    setTheme(selectedTheme);
-    localStorage.setItem('theme', selectedTheme);
-    applyTheme(selectedTheme);
+  const saveTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+    document.body.className = newTheme;
+};
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
 
-  const applyTheme = (theme) => {
-    document.body.className = theme;
-    if (theme === 'dark') {
-      document.body.style.backgroundColor = 'black';
-    } else {
-      document.body.style.backgroundColor = 'white';
-    }
+   const getLinkClass = (path) => {
+    return `nav-link ${location.pathname === path ? 'active' : ''}`;
   };
 
   return (
-    <nav className="px-10">
-      <div className="nav-content">
-        <div className="logo">
-          <Link className="logo-img" to="/app">
-            <img src={theme === 'dark' ? LogoDark : LogoLight} alt="Logo" />
-          </Link>
-        </div>
-
-        <ul className="nav-links">
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/service">Service</Link>
-          </li>
-          <li>
-            <Link to="/portfolio">Portfolio</Link>
-          </li>
-          <li>
-            <Link to="/blog">Blog</Link>
-          </li>
-          <li>
-            <Link to="/pages">Pages</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact Us</Link>
-          </li>
-        </ul>
-        <select id="theme-selector" onChange={saveTheme} value={theme}>
-          <option value="light">Light</option>
-          <option value="dark">Dark</option>
-        </select>
-      </div>
-    </nav>
+    <>
+      <header className="px-10 header">
+        <nav className="navbar navbar-expand-lg">
+          <div className="container-fluid px-10">
+            <Link className="navbar-brand" to="/app">
+              <img
+                src={theme === 'dark' ? LogoDark : LogoLight}
+                alt="Logo"
+                style={{ height: '50px' }}
+              />
+            </Link>
+            <button
+              className="navbar-toggler"
+              type="button"
+              onClick={toggleMenu}
+              aria-controls="navbarNav"
+              aria-expanded={menuOpen}
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div
+              className={`collapse navbar-collapse ${menuOpen ? 'show' : ''}`}
+              id="navbarNav"
+              style={{ backgroundColor: menuOpen ? (theme === 'dark' ? '#343a40' : '#f8f9fa') : 'transparent' }} // Added background color
+            >
+              <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li className="nav-item">
+                  <Link className={getLinkClass("/about")} to="/about">
+                    About
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className={getLinkClass("/service")} to="/service">
+                    Service
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className={getLinkClass("/portfolio")} to="/portfolio">
+                    Portfolio
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className={getLinkClass("/blog")} to="/blog">
+                    Blog
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className={getLinkClass("/pages")} to="/pages">
+                    Pages
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className={getLinkClass("/contact")} to="/contact">
+                    Contact Us
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <button
+                    className={`btn theme-selector ms-2 ${theme === 'dark' ? 'btn-dark' : 'btn-light'}`}
+                    onClick={saveTheme}
+                  >
+                    {theme === 'dark' ? 'Light' : 'Dark'}
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </>
   );
 };
 

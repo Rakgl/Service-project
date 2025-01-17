@@ -17,74 +17,8 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 420px;
+  height: 400px;
 }
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
-  color: $muted-text-color;
-
-  .footer-brand {
-    width: 400px;
-    .text-input {
-      color: gray;
-    }
-
-    .subscribe-container {
-      display: flex;
-      align-items: center;
-      background: rgba(255, 255, 255, 0.1); 
-      border: 1px solid rgba(255, 255, 255, 0.3); 
-      border-radius: 8px;
-      padding: 5px;
-      backdrop-filter: blur(10px); 
-      width: fit-content;
-    
-      .subscribe-input {
-        padding: 10px;
-        border: none;
-        outline: none;
-        background: transparent;
-        color: $muted-text-color; 
-        font-size: 16px;
-        width: 200px;
-    
-        &::placeholder {
-          color: rgba(255, 255, 255, 0.7); // Lighter placeholder
-        }
-      }
-    
-      .subscribe-button {
-        padding: 10px 15px;
-        border: none;
-        border-radius: 8px;
-        background-color: $primary-color; 
-        color: white;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    
-        &:hover {
-          background-color: $primary-color; 
-        }
-      }
-    }
-  }
-  .inline {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  
-    .footer-heading {
-      color: $muted-text-color;
-    }
-    
-    .footer-link {
-      text-decoration: none;
-      color: $muted-text-color;
-    }
-  }
+.useful-links ul li {
+  margin-bottom: 15px;
 }
-
-
