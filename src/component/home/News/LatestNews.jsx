@@ -8,7 +8,7 @@ const LatestNews = () => {
     {
       date: '05 Oct 2022',
       category: 'Hosting',
-      author: 'Allan Moore',
+      author: 'Allan Moorea',
       title: 'How Litespeed Technology Works To Speed Up Your Site',
       description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
       link: '#',
