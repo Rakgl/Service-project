@@ -1,7 +1,7 @@
 const AboutPage = () => {
   return (
     <>
-      <div className="px-10">About</div>
+      <div>About</div>
     </>
   );
 };

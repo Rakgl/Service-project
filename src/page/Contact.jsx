@@ -1,7 +1,7 @@
 const ContactPage = () => {
   return (
     <>
-      <div className="px-10">Contact</div>
+      <div>Contact</div>
     </>
   );
 };

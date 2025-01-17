@@ -11,13 +11,13 @@
 
 body.light {
   color: $text-color;
-  background-color: $background-color;
+  // background-color: $background-color;
 }
 
 /* Apply dark theme styles */
 body.dark {
   color: $muted-text-color;
-  background-color: $background;
+  background-color: black;
 }
 
 select {
@@ -29,5 +29,3 @@ select {
 select:focus {
   outline: none;
 }
-
-
