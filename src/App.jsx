@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import RouterComponent from './router/RouterComponent';
-// import './styles/index.scss';
 import './styles/main.scss';
 
 
