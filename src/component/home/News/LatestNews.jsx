@@ -38,8 +38,10 @@ const LatestNews = () => {
     <section className="latest-news">
       
       <div className="top-container">
-        <p>Blog</p>
-        <h2 className="section-title">Latest News</h2>
+        <div className="top-left">
+          <p className="blog mx-5">. Blog .</p>
+          <h2 className="section-title">Latest News</h2>
+        </div>
         <div className="see-all-posts">
           <a href="#" className="see-all-button">See All Posts →</a>
         </div>
