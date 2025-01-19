@@ -1,13 +1,14 @@
-// import React from 'react';
+import 'react';
 import './footer.scss';
 import Logo from '../../assets/logo-colored.png';
 import { Link } from 'react-router-dom';
 
+
 const Footer = () => {
   return (
     <>
-      <footer className="footer text-light py-5 footer-img">
-        <div className="container">
+      <footer className="footer text-light footer-img">
+        <div className="px-10">
           <div className="row gy-4 d-flex justify-content-between">
             <div className="col-lg-4">
               <img src={Logo} alt="logo" className="mb-2" />
@@ -29,7 +30,7 @@ const Footer = () => {
                 />
                 <button className="btn btn-primary">Subscribe</button>
               </div>
-              <p className="mt-2 text-muted small">
+              <p className="mt-2 small">
                 *we will not share your personal info
               </p>
             </div>
@@ -160,8 +161,9 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="text-center mt-5">
+          <div className="d-flex justify-content-between mt-5">
             <p className="mb-0">&copy; 2024 Created by Rak</p>
+            <p>Terms of use | Privacy Policy</p>
           </div>
         </div>
       </footer>

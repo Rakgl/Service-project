@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import  { useRef, useEffect } from 'react';
 import './banner.scss';
 import Illustration from '../../../assets/home/illustration-3.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,19 +6,11 @@ import { faFacebook, faYoutube, faInstagram, faXTwitter, faGgCircle, faGooglePla
 import ZigZac from '../../../assets/home/zig-zac.png'
 const MainBanner = () => {
     const imageHolderRef = useRef(null);
-    const orb1Ref = useRef(null);
-    const orb2Ref = useRef(null);
-  
-    let orb1Angle = 0;
-    let orb2Angle = 180;
-    const rotationSpeed = 0.2;
     let currentRotateX = 0;
     let currentRotateY = 0;
   
     useEffect(() => {
       const imageHolder = imageHolderRef.current;
-      const orb1 = orb1Ref.current;
-      const orb2 = orb2Ref.current;
       let isAnimating = true;
   
       const handleMouseMove = (e) => {
@@ -35,14 +27,6 @@ const MainBanner = () => {
   
         const isCursorRight = x > 0;
         const isCursorDown = y > 0;
-  
-        if (isCursorRight) {
-          orb1.style.transform = `translate(-50%, -50%) rotateX(${-currentRotateX}deg) rotateY(${-currentRotateY}deg) scale(0.7)`; // Orb on left (opposite) shrinks
-          orb2.style.transform = `translate(-50%, -50%) rotateX(${-currentRotateX}deg) rotateY(${-currentRotateY}deg) scale(1)`;   // Orb on right (same side) stays normal
-        } else {
-          orb1.style.transform = `translate(-50%, -50%) rotateX(${-currentRotateX}deg) rotateY(${-currentRotateY}deg) scale(1)`;
-          orb2.style.transform = `translate(-50%, -50%) rotateX(${-currentRotateX}deg) rotateY(${-currentRotateY}deg) scale(0.7)`;
-        }
       };
   
       const handleMouseLeave = () => {
@@ -50,45 +34,10 @@ const MainBanner = () => {
         currentRotateY = 0;
   
         imageHolder.style.transform = `rotateX(0deg) rotateY(0deg)`;
-  
-        orb1.style.transform = `translate(-50%, -50%) scale(1)`;
-        orb2.style.transform = `translate(-50%, -50%) scale(1)`;
-      };
-  
-      const positionOrbs = (rotateX, rotateY) => {
-        if (!imageHolder || !orb1 || !orb2) return;
-  
-        const radius = imageHolder.offsetWidth / 2;
-  
-        orb1Angle = (orb1Angle + rotationSpeed) % 360;
-        orb2Angle = (orb2Angle + rotationSpeed) % 360;
-  
-        const calculateOrbPosition = (angle) => {
-          const angleRad = (angle * Math.PI) / 180;
-          const x = radius * Math.cos(angleRad);
-          const y = radius * Math.sin(angleRad);
-          return { x, y };
-        };
-  
-        let pos1 = calculateOrbPosition(orb1Angle);
-        let pos2 = calculateOrbPosition(orb2Angle);
-  
-        const tiltFactor = 0.9;
-        pos1.x -= rotateY * tiltFactor;
-        pos1.y += rotateX * tiltFactor;
-        pos2.x -= rotateY * tiltFactor;
-        pos2.y += rotateX * tiltFactor;
-  
-        orb1.style.left = `calc(50% + ${pos1.x}px)`;
-        orb1.style.top = `calc(50% + ${pos1.y}px)`;
-        orb2.style.left = `calc(50% + ${pos2.x}px)`;
-        orb2.style.top = `calc(50% + ${pos2.y}px)`;
       };
   
       const animate = () => {
         if (!isAnimating) return;
-  
-        positionOrbs(currentRotateX, currentRotateY);
         requestAnimationFrame(animate);
       };
   
@@ -116,7 +65,7 @@ const MainBanner = () => {
           <div id='stars3'></div>
         </div>
 
-        <div className='col-lg-6 col-sm-12 banner-side pt-10'>
+        <div className='col-xl-6 col-lg-5 col-sm-12 banner-side pt-10'>
           <div className='line-icon d-flex justify-content-between'>
             <FontAwesomeIcon icon={faFacebook} />
             <FontAwesomeIcon icon={faYoutube} />
@@ -128,7 +77,7 @@ const MainBanner = () => {
           </div>
           <div className='big-letter'>
             <h1>
-              providing best services & IT <span style={{ color: "#09AFF4" }}>solutions</span>
+              Providing Best Services & IT <span style={{ color: "#09AFF4" }}>solutions</span>
             </h1>
             <img src={ZigZac}/>
           </div>
@@ -138,17 +87,15 @@ const MainBanner = () => {
             </p>
           </div>
           <div className='d-flex'>
-            <button type="button" className="btn btn-outline-primary">Primary</button>
-            <button className='round-button rowCC'>
+            <button type="button" className="btn btn-outline-primary">Start Now</button>
+            <button className='round-button'>
               <span><FontAwesomeIcon icon={faGooglePlay} /></span>
             </button>
           </div>
         </div>
-        <div className='col-lg-6 col-sm-12 banner-side rowCC'>
+        <div className='col-xl-6 col-lg-7 col-sm-12 banner-side rowCC'>
           <div className='image-holder' ref={imageHolderRef}>
             <img src={Illustration} alt="Illustrat" />
-            <div className='orb' ref={orb1Ref}></div>
-            <div className='orb' ref={orb2Ref}></div>
           </div>
         </div>
       </div>
