@@ -1,11 +1,15 @@
-import React, { useEffect, useState, useRef } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLightbulb, faFileInvoice, faUser, faBullseye } from '@fortawesome/free-solid-svg-icons';
+import { faLightbulb as faRegularLightbulb, faUser as faRegularUser } from '@fortawesome/free-regular-svg-icons';
+import React, { useEffect, useState, useRef } from 'react';
+import './running.scss'
 
 const RunningNum = () => {
   const counters = [
-    { id: 1, targetNumber: 750, label: "Finished projects" },
-    { id: 2, targetNumber: 23, label: "Created jobs" },
-    { id: 3, targetNumber: 200, label: "Happy customers" },
-    { id: 4, targetNumber: 28, label: "Years of experience" },
+    { id: 1, targetNumber: 750, label: 'Finished projects', icon: <FontAwesomeIcon icon={faRegularLightbulb} /> },
+    { id: 2, targetNumber: 23, label: 'Created jobs', icon: <FontAwesomeIcon icon={faFileInvoice} /> },
+    { id: 3, targetNumber: 200, label: 'Happy customers', icon: <FontAwesomeIcon icon={faRegularUser} /> },
+    { id: 4, targetNumber: 28, label: 'Years of experience', icon: <FontAwesomeIcon icon={faBullseye} /> },
   ];
 
   const [numbers, setNumbers] = useState(counters.map(() => 0));
@@ -22,7 +26,7 @@ const RunningNum = () => {
     };
 
     const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.5, // Trigger when 50% of the section is visible
+      threshold: 0.5,
     });
 
     if (sectionRef.current) {
@@ -59,18 +63,21 @@ const RunningNum = () => {
   }, [hasStarted]);
 
   return (
-    <div ref={sectionRef} className="widthPC-100 flex-wrap rowCC py-5">
-      {counters.map((counter, index) => (
-        <div
-          key={counter.id}
-          className="heightPx-200 widthPx-250 border border-primary columnCC rounded text-center"
-        >
-          <div id="counter" className="font-big font-weight">
-            {numbers[index]}+
+    <div ref={sectionRef} className=" background">
+      <div className='opa'>
+        {counters.map((counter, index) => (
+          <div
+            key={counter.id}
+            className="heightPx widthPx-230 border border-primary columnCC text-white rounded text-center mr-4 "
+          >
+            <div className='font-lg text-primary'>{counter.icon}</div>
+            <div id="counter" className="fontlg font-weight text-white">
+              {numbers[index]}+
+            </div>
+            <h5 className='text-white'>{counter.label}</h5>
           </div>
-          <h4>{counter.label}</h4>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
