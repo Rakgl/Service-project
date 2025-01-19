@@ -19,13 +19,3 @@ body.dark {
   color: $muted-text-color;
   background-color: black;
 }
-
-select {
-  color: black;
-  background-color: white;
-  border: 1px solid #ccc;
-}
-
-select:focus {
-  outline: none;
-}
