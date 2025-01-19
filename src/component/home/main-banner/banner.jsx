@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import  { useRef, useEffect } from 'react';
 import './banner.scss';
 import Illustration from '../../../assets/home/illustration-3.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
