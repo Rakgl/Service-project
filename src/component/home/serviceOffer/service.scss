@@ -1,0 +1,29 @@
+.big-bg{
+    background-color: #070923;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    gap: 1rem;
+}
+.grid-item {
+    border: 1px solid #ccc;
+    min-height: 300px;
+    padding: 2rem 1rem;
+    background: linear-gradient(to right, #09AEF4 50%, transparent 50%);
+    background-size: 200%;
+    background-position: right bottom; /* Initial position */
+    transition: background-position 0.5s ease; /* Smooth transition */
+    .font-sizePx16{
+         text-decoration: none;
+    }
+    &:hover{
+        background-position: left bottom; /* On hover, move to left bottom */
+        span{
+            color: white;
+        }
+    }
+  }
+.Acenter{
+    align-self: center;
+}

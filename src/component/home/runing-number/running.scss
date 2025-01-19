@@ -1,0 +1,29 @@
+.background{
+    background-image: url('../../../assets/pattern-bg-3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-content: center;
+}
+.opa{
+    min-height: 400px;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+@media(max-width: 1024px){
+    .opa{
+        flex-wrap: wrap;
+    }
+}
+.fontlg{
+    font-size: 45px;
+}
+.heightPx{
+    height: 210px;
+}

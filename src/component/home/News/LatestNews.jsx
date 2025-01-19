@@ -39,7 +39,7 @@ const LatestNews = () => {
       
       <div className="top-container">
         <div className="top-left">
-          <p className="blog mx-5">. Blog .</p>
+          <p className="blog">Blog →</p>
           <h2 className="section-title">Latest News</h2>
         </div>
         <div className="see-all-posts">

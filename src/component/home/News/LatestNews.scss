@@ -27,11 +27,17 @@ $button-bg-hover: #2f65d8;
 }
 .top-left{
   margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .top-left p{
-  font-size: 25px;
+  font-size: 20px;
   color: $button-bg;
   font-weight: bold;
+}
+.section-title{
+  font-size: 42px;
 }
 
 .article-container {
