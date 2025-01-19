@@ -1,0 +1,187 @@
+.main-container{
+    height: 900px;
+    background-color: #070923;
+    .half-container{
+        h6{
+        color: #09AFF4;
+        margin-bottom: 0;
+        }
+        .circle{
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 100%;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        .image-holder{
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .contain-field{
+            margin-top: 40px;
+            width: 100%;
+            .field{
+                height: 180px;
+                .box{
+                    width: 50px;
+                    height: 50px;
+                    font-size: 25px;
+                    margin-right: 20px;
+                    border-radius: 5px;
+                    padding: 5px 0 0 0;
+                    color: #09AFF4;
+                    transition: 0.4s;
+                    background-color: #072E51;
+                }
+                &:hover{
+                    .box{
+                        margin-top: -5px;
+                        color: white;
+                        transition: 0.4s;
+                        background-color: #09AFF4;
+                    }
+                }
+            }
+        }
+        .font-lg{
+            margin-top: 10px;
+            font-weight: 700;
+            font-size: 45px;
+            padding-right: 100px;
+        }
+        .mt-10{
+            margin-left: 40px;
+            margin-top: 60px;
+        }
+        .btn-outline-primary{
+            border-color: #09AFF4;
+            color: #09AFF4;
+            font-size: 15px;
+            border: 2px solid #09AFF4; 
+            border-radius: 0 20px 0 20px;
+            height: 50px;
+            width: 170px;
+            font-weight: 700;
+            &:hover{
+                background-color: #09AFF4;
+                color: white;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1355px) {
+    .main-container{
+        .half-container{
+            .mt-10{
+                margin-top: 100px;
+            }
+        }
+    }
+    .px-10{
+        padding: 0 50px 0 50px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .main-container{
+        height: 1000px;
+        .half-container{
+            .mt-10{
+                margin-top: 200px;
+            }
+            .contain-field{
+                .field{
+                    height: 140px;
+                    padding-right: 100px;
+                }
+            }
+            .font-lg{
+                font-size: 35px;
+                padding-right: 100px;
+            }
+            .font-sizePx18{
+                font-size: 16px !important;
+            }
+        }
+    }
+}
+@media screen and (max-width: 992px) {
+    .main-container{
+        height: auto;
+        .half-container{
+            .mt-10{
+                margin-top: 50px;
+            }
+            .font-lg{
+                font-size: 30px;
+                padding-right: 200px;
+            }
+            .image-holder{
+                width: 600px;
+                height: 600px;
+            }
+            .mt-10{
+                margin-left: 0px;
+            }
+        }
+        .half-container:nth-last-child(2){
+            order: 1;
+        }
+        .btn-outline-primary{
+            margin-bottom: 20px;
+        }    
+    }
+    .px-10{
+        padding: 0 100px 0 100px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .px-10{
+        padding: 0 30px 0 30px;
+    }
+}
+@media screen and (max-width: 670px) {
+    .main-container{
+        .half-container{
+            .image-holder{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 460px) {
+    .main-container{
+        .half-container{
+            .font-lg{
+                font-size: 25px;
+                padding-right: 50px;
+            }
+            .contain-field{
+                .field{
+                    height: 140px;
+                    padding-right: 20px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 376px) {
+    .main-container{
+        .half-container{
+            .contain-field{
+                .field{
+                    height: 200px;
+                }
+            }
+        }
+    }
+}

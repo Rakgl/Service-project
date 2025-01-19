@@ -77,7 +77,7 @@ const MainBanner = () => {
           </div>
           <div className='big-letter'>
             <h1>
-              providing best services & IT <span style={{ color: "#09AFF4" }}>solutions</span>
+              Providing Best Services & IT <span style={{ color: "#09AFF4" }}>solutions</span>
             </h1>
             <img src={ZigZac}/>
           </div>
