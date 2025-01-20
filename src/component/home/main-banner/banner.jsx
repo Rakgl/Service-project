@@ -3,6 +3,7 @@ import './banner.scss';
 import Illustration from '../../../assets/home/illustration-3.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faYoutube, faInstagram, faXTwitter, faGgCircle, faGooglePlay  } from '@fortawesome/free-brands-svg-icons';
+import { faPlay  } from '@fortawesome/free-solid-svg-icons';
 import ZigZac from '../../../assets/home/zig-zac.png'
 const MainBanner = () => {
     const imageHolderRef = useRef(null);
@@ -88,9 +89,24 @@ const MainBanner = () => {
           </div>
           <div className='d-flex'>
             <button type="button" className="btn btn-outline-primary">Start Now</button>
-            <button className='round-button'>
-              <span><FontAwesomeIcon icon={faGooglePlay} /></span>
+            <button type="button" className='round-button' data-bs-toggle="modal" data-bs-target="#youtubeModal">
+              <span><FontAwesomeIcon icon={faPlay} /></span>
             </button>
+
+            <div className="modal fade" id="youtubeModal" tabIndex="-1" aria-labelledby="youtubeModalLabel" aria-hidden="true">
+                <div className="modal-dialog modal-lg">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div className="modal-body">
+                            <div className="ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/qP23O70ve7k?si=HyPjkYQ8NNRFlHdF" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
           </div>
         </div>
         <div className='col-xl-6 col-lg-7 col-sm-12 banner-side rowCC'>
