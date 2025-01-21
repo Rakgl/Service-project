@@ -3,6 +3,7 @@ import './why-choose-us.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGgCircle  } from '@fortawesome/free-brands-svg-icons';
 import WhyChoose from '../../../assets/home/why-choose-us.png'
+import AOS from "aos";
 
 const WhyChooseUs = () => {
     const imageHolderRef = useRef(null);
@@ -27,6 +28,10 @@ const WhyChooseUs = () => {
       ];
     
     useEffect(() => {
+        AOS.init({
+            once: true,
+          });
+        
         const imageHolder = imageHolderRef.current;
         let isAnimating = true;
     
@@ -75,13 +80,13 @@ const WhyChooseUs = () => {
     }, []);
     
     return (
-      <div className='row main-container-choose px-10 '>
+      <div className='row main-container-choose px-10 '  data-aos="fade-up" data-aos-duration="1000">
         <div className="col-xxl-6 col-xl-6 col-lg-6 half-container">
             <div className='image-holder mt-10' ref={imageHolderRef}>
                 <img src={WhyChoose} alt="about-us" />
             </div>
         </div>
-        <div className="col-xxl-6 col-xl-6 col-lg-6 half-container">
+        <div className="col-xxl-6 col-xl-6 col-lg-6 half-container" data-aos="fade-up" data-aos-duration="1600" data-aos-offset="200">
             <div className='mt-4'>
                 <h6><FontAwesomeIcon icon={faGgCircle} />&nbsp;&nbsp;Why Choose Us&nbsp;&nbsp;<FontAwesomeIcon icon={faGgCircle} /></h6>
             </div>

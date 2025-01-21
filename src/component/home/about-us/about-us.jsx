@@ -3,8 +3,8 @@ import './about-us.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGgCircle  } from '@fortawesome/free-brands-svg-icons';
 import { faMedal, faGamepad, faMapMarkedAlt, faGears  } from '@fortawesome/free-solid-svg-icons';
-import Bot from '../../../assets/home/bot.webp'
 import AboutUs from '../../../assets/home/home-about-us.png'
+import "aos/dist/aos.css";
 
 const HomeAboutUs = () => {
     const imageHolderRef = useRef(null);
@@ -83,7 +83,7 @@ const HomeAboutUs = () => {
     
     return (
       <div className='row main-container px-10 '>
-        <div className="col-xxl-6 col-xl-6 col-lg-6 half-container">
+        <div className="col-xxl-6 col-xl-6 col-lg-6 half-container" data-aos="fade-up" data-aos-duration="1600" data-aos-offset="200">
             <div className='mt-4'>
                 <h6><FontAwesomeIcon icon={faGgCircle} />&nbsp;&nbsp;About Us&nbsp;&nbsp;<FontAwesomeIcon icon={faGgCircle} /></h6>
             </div>
@@ -110,12 +110,9 @@ const HomeAboutUs = () => {
             </div>
             <button type="button" className="btn btn-outline-primary">Get In Touch</button>
         </div>
-        <div className="col-xxl-6 col-xl-6 col-lg-6 half-container">
+        <div className="col-xxl-6 col-xl-6 col-lg-6 half-container" data-aos="fade-up" data-aos-duration="1000">
             <div className='image-holder mt-10' ref={imageHolderRef}>
                 <img src={AboutUs} alt="about-us" />
-            </div>
-            <div className='circle'>
-                <img src={Bot} alt="" />
             </div>
         </div>
       </div>
