@@ -7,6 +7,7 @@ import LatestNews from '../component/home/News/LatestNews'
 import PricingPlans from '../component/home/PricingPlans/PricingPlans'
 import RunningNum from '../component/home/runing-number/RunningNum';
 import ServiceOffer from '../component/home/serviceOffer/ServiceOffer';
+import TestiMo from '../component/home/testimonial/TestiMo';
 const HomePage = () => {
   return (
     <>
@@ -17,6 +18,8 @@ const HomePage = () => {
         <WhyChooseUs/>
         <CarouselCard />
         <RunningNum/>
+        <TestiMo/>
+        <LatestNews />
         <PricingPlans />
         <LatestNews />
       </div>

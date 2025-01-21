@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLightbulb, faFileInvoice, faUser, faBullseye } from '@fortawesome/free-solid-svg-icons';
+import { faFileInvoice, faBullseye } from '@fortawesome/free-solid-svg-icons';
 import { faLightbulb as faRegularLightbulb, faUser as faRegularUser } from '@fortawesome/free-regular-svg-icons';
 import React, { useEffect, useState, useRef } from 'react';
 import './running.scss'
