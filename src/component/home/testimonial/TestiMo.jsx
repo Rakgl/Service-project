@@ -1,12 +1,10 @@
-import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import './timo.scss'
-import 'swiper/css/pagination';
-import img1 from "../../../assets/1.jpg"
-import img2 from "../../../assets/2.jpg"
-import img3 from "../../../assets/3.jpg"
+import img1 from "../../../assets/1.png"
+import img2 from "../../../assets/2.png"
+import img3 from "../../../assets/3.png"
 import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 const data=[
@@ -41,16 +39,16 @@ const TestiMo = () => {
             }}
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
-            className="mySwiper"
+            className="myySwiper"
           >
-            <div className=''>
+            <div className="myswip">
                 <h2>TESTIMONAILS</h2>
                 {
                     data.map(({name,img,text})=>(
-                        <SwiperSlide>
-                            <img src={img} alt="" />
-                            <h5>{text}</h5>
-                            <h3>{name}</h3>
+                        <SwiperSlide className=''>
+                            <img src={img} alt="" className='widthPx-60 mx-auto'/>
+                            <h5 className='text-center widthPC-90 mx-auto'>{text}</h5>
+                            <h3 className='text-primary text-center'>{name}</h3>
                         </SwiperSlide>
                     ))
                 }

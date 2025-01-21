@@ -1,9 +1,6 @@
 import './CarouselStyle.scss';
-import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "./CarouselStyle.scss"
-import 'swiper/css';
-import 'swiper/css/pagination';
 import { Autoplay } from 'swiper/modules';
 import img1 from "../../../assets/home/1-white.png"
 import img2 from "../../../assets/home/2-white.png"
