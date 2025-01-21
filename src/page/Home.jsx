@@ -15,8 +15,8 @@ const HomePage = () => {
         <HomeAboutUs/>
         <CarouselCard />
         <RunningNum/>
-        <LatestNews />
         <PricingPlans />
+        <LatestNews />
       </div>
     </>
   );
