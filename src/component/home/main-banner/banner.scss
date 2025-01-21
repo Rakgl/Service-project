@@ -189,12 +189,37 @@ $stars-big: generateStars(100);
       border: 2px solid #09AFF4;
       background-color: #09AFF4;
       color: white;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(9, 175, 244, 0.7);
+      }
+      70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 10px rgba(9, 175, 244, 0);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(9, 175, 244, 0);
+      }
     }
   }
 }
 
 .pt-10 {
     padding-top: 170px;
+}
+
+.modal-content{
+  margin-top: 100px;
+}
+.modal-header{
+  padding: 5px 10px 5px 10px;
+}
+.modal-body{
+  padding: 0;
 }
 
 @media screen and (max-width: 1355px) {
