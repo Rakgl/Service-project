@@ -53,7 +53,7 @@ const ServiceOffer = () => {
             <h1 className='text-white'>Services We Offer</h1>
             <p className='text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias itaque minima commodi, repudiandae facere adipisci voluptatibus corporis nobis perferendis iste.</p>
           </div>
-          <button className='widthPx-180 heightPx-50 Acenter bg-primary text-white font-sizePx16'>See All Services</button>
+          <button type="button" class="heightPx-50 btn btn-primary">Primary</button>
         </div>
         <div className="grid-container">
           {serviceOffer.map((data) => (

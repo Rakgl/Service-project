@@ -1,6 +1,7 @@
 import './CarouselStyle.scss';
 import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import "./CarouselStyle.scss"
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay } from 'swiper/modules';
