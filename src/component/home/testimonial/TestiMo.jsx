@@ -41,12 +41,12 @@ const TestiMo = () => {
             modules={[Autoplay, Pagination, Navigation]}
             className="myySwiper"
           >
-            <div className="myswip">
+            <div className="">
                 <h2>TESTIMONAILS</h2>
                 {
                     data.map(({name,img,text})=>(
-                        <SwiperSlide className=''>
-                            <img src={img} alt="" className='widthPx-60 mx-auto'/>
+                        <SwiperSlide className='myswip'>
+                            <img src={img} alt="" className='widthPx-60 mx-auto al-center'/>
                             <h5 className='text-center widthPC-90 mx-auto'>{text}</h5>
                             <h3 className='text-primary text-center'>{name}</h3>
                         </SwiperSlide>

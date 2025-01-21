@@ -1,5 +1,19 @@
 .myySwiper{
-    height: 400px;
-    width: 80%;
+    height: 600px;
+    width: 100%;
+    padding: 0 100px;
     margin: auto;
+    background-image: url('../../../assets/1bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .myswip{
+        align-content: center;
+    }
+    .al-center{
+        display: flex;
+    }
+    h5{
+        margin: 2rem 0;
+    }
 }
