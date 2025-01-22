@@ -4,8 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "vite",
+    "qr-start": "node scripts/generateQRCode.js && vite",
     "format": "prettier --write .",
-    "dev": "vite",
+    "dev": "kill-port 5173 && node scripts/generateQRCode.js && vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -22,6 +24,7 @@
     "@popperjs/core": "^2.11.8",
     "aos": "^2.3.4",
     "bootstrap": "^5.3.3",
+    "qrcode-terminal": "^0.12.0",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.7",
     "react-dom": "^18.3.1",
