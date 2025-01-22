@@ -123,6 +123,7 @@ $stars-big: generateStars(100);
       margin-bottom: 0;
     }
     h1{
+      color: white;
       margin-top: 0px;
       font-size: 70px;
       font-weight: 900;
@@ -164,21 +165,6 @@ $stars-big: generateStars(100);
       color: white;
       width: 170px;
       font-size: 22px;
-    }
-
-    .btn-outline-primary{
-      border-color: #09AFF4;
-      color: #09AFF4;
-      font-size: 15px;
-      border: 2px solid #09AFF4; 
-      border-radius: 0 20px 0 20px;
-      height: 50px;
-      width: 170px;
-      font-weight: 700;
-      &:hover{
-        background-color: #09AFF4;
-        color: white;
-      }
     }
 
     .round-button{
@@ -243,11 +229,6 @@ $stars-big: generateStars(100);
           margin-top: -20px;
           width: 320px;
         }
-      }
-      .btn-outline-primary{
-        font-size: 15px;
-        height: 50px;
-        width: 160px;
       }
     }
   }
@@ -315,10 +296,6 @@ $stars-big: generateStars(100);
         img{
           width: 160px;
         }
-      }
-      .btn-outline-primary{
-        font-size: 13px;
-        width: 130px;
       }
     }
   }

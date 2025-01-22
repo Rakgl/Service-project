@@ -1,0 +1,26 @@
+.project-goal{
+    width: 100%;
+    margin-bottom: 100px;
+    .top{
+        p{
+            font-size: 20px;
+        }
+        .Img-top{
+            width: 100%;
+            height: 450px;
+            border-radius: 10px;
+            background-image: url(../../../assets/portfolio/image-banner.jpg);
+            background-size: cover;
+            .round-button{
+                width: 50px;
+                height: 50px;
+                border-radius: 100%;
+                margin-left: 20px;
+                border: 2px solid #09AFF4;
+                background-color: #09AFF4;
+                color: white;
+                animation: pulse 2s infinite;
+            }
+        }
+    }
+}

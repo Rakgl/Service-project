@@ -5,6 +5,7 @@ import { faGgCircle  } from '@fortawesome/free-brands-svg-icons';
 import { faMedal, faGamepad, faMapMarkedAlt, faGears  } from '@fortawesome/free-solid-svg-icons';
 import AboutUs from '../../../assets/home/home-about-us.png'
 import "aos/dist/aos.css";
+import Button from '../../button/Button';
 
 const HomeAboutUs = () => {
     const imageHolderRef = useRef(null);
@@ -108,7 +109,7 @@ const HomeAboutUs = () => {
                     </div>
                 ))}
             </div>
-            <button type="button" className="btn btn-outline-primary">Get In Touch</button>
+            <Button>Get In Touch</Button>
         </div>
         <div className="col-xxl-6 col-xl-6 col-lg-6 half-container" data-aos="fade-up" data-aos-duration="1000">
             <div className='image-holder mt-10' ref={imageHolderRef}>
