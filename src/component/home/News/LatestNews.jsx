@@ -3,6 +3,10 @@ import './LatestNews.scss';
 import image1 from '../../../assets/1.jpg';
 import image2 from '../../../assets/2.jpg';
 import image3 from '../../../assets/3.jpg';
+import AOS from "aos";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBookmark } from '@fortawesome/free-regular-svg-icons';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 const LatestNews = () => {
   const articles = [
     {
@@ -35,7 +39,7 @@ const LatestNews = () => {
   ];
 
   return (
-    <section className="latest-news">
+    <section className="latest-news" data-aos="fade-up" data-aos-duration="1000">
       
       <div className="top-container">
         <div className="top-left">
@@ -56,7 +60,7 @@ const LatestNews = () => {
               </div>
               <div className="article-content">
                 <div className="article-category-author">
-                  <span>{article.category}</span> | <span>{article.author}</span>
+                  <p><FontAwesomeIcon icon={faBookmark} className="mx-1" />{article.category} | <FontAwesomeIcon icon={faUser} /> {article.author}</p>
                 </div>
                 <h3 className="article-title">{article.title}</h3>
                 <p className="article-description">{article.description}</p>

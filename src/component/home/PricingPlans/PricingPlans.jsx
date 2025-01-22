@@ -1,27 +1,33 @@
 import React from 'react';
 import './PricingPlans.scss';
-
+import AOS from "aos";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDesktop, faBoxOpen, faGears, faUserSecret } from '@fortawesome/free-solid-svg-icons';
 const PricingPlans = () => {
   const plans = [
     {
+      icon: faDesktop,
       name: 'Free Plan',
       price: 0,
       description: ['150 Lorem, Ipsum Dolor.', '20 Lorem Ipsum Dolor Sit.', 'Lorem Ipsum Dolor Sit.', 'Free Lorem Ipsum Dolor.', 'Added Lorem Ipsum Dolor.'],
       popular: false,
     },
     {
+      icon: faGears,
       name: 'Standard Plan',
       price: 85,
       description: ['150 Lorem, Ipsum Dolor.', '20 Lorem Ipsum Dolor Sit.', 'Lorem Ipsum Dolor Sit.', 'Free Lorem Ipsum Dolor.', 'Added Lorem Ipsum Dolor.'],
       popular: false,
     },
     {
+      icon: faBoxOpen,
       name: 'Pro Plan',
       price: 150,
       description: ['150 Lorem, Ipsum Dolor.', '20 Lorem Ipsum Dolor Sit.', 'Lorem Ipsum Dolor Sit.', 'Free Lorem Ipsum Dolor.', 'Added Lorem Ipsum Dolor.'],
       popular: true,
     },
     {
+      icon: faUserSecret,
       name: 'Ultimate Plan',
       price: 210,
       description: ['150 Lorem, Ipsum Dolor.', '20 Lorem Ipsum Dolor Sit.', 'Lorem Ipsum Dolor Sit.', 'Free Lorem Ipsum Dolor.', 'Added Lorem Ipsum Dolor.'],
@@ -30,7 +36,7 @@ const PricingPlans = () => {
   ];
 
   return (
-    <section className="pricing-plans">
+    <section className="pricing-plans" data-aos="fade-up" data-aos-duration="1000">
       <div className="top-container">
         <div className="top-left">
           <p className="plan">Pricing Plans →</p>
@@ -47,6 +53,7 @@ const PricingPlans = () => {
             <div className="plan-header">
               {plan.popular && <span className="badge">Most Popular Plan</span>}
             </div>
+            <h6 className="icons-solid"><FontAwesomeIcon icon={plan.icon} /></h6>
             <h3 className="plan-title">{plan.name}</h3>
             <p className="price">${plan.price}<span>Per Project</span></p>
             <ul className="plan-features">
