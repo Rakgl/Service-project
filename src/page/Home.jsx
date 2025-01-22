@@ -19,7 +19,6 @@ const HomePage = () => {
         <CarouselCard />
         <RunningNum/>
         <TestiMo/>
-        <LatestNews />
         <PricingPlans />
         <LatestNews />
       </div>

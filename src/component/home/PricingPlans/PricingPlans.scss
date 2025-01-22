@@ -1,5 +1,5 @@
 $primary-color: #ffffff;
-$background-color: #0f172a;
+$background-color: #070923;
 $card-bg: #1e293b;
 $highlight-bg: #3b82f6;
 $accent-color: #3b82f6;
@@ -92,7 +92,10 @@ flex-wrap: wrap;
       // box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
     }
     }
-
+.icons-solid{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
     .plan-title {
     font-size: 23px;
     margin: 16px 0;
