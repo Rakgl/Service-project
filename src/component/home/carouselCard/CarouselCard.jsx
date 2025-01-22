@@ -26,11 +26,11 @@ const CarouselCard = () => {
             loop={true}
             breakpoints={{
               640: {
-                slidesPerView: 2,
+                slidesPerView: 3,
                 spaceBetween: 20,
               },
               768: {
-                slidesPerView: 3,
+                slidesPerView: 4,
                 spaceBetween: 30,
               },
               1024: {

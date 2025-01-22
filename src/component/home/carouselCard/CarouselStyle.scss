@@ -1,27 +1,47 @@
-.Card{
+.Card {
     width: 100%;
-    padding: 2rem 0;
-    height: 400px;
+    padding: 2rem 100px;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     background-color: #09AEF4;
-}
-.Card h1{
+  }
+  
+  .Card h1 {
     text-align: center;
     opacity: 0.3;
     color: white;
     margin-bottom: 4rem;
     margin-top: 3rem;
     font-size: 30px;
-}
-.mySwiper{
-    img{
-        height: 120px;
-        object-fit: contain;
-        filter:grayscale(100%);
-        &:hover{
-            filter:grayscale(0);
-        }
+  }
+  
+  .mySwiper {
+    img {
+      height: 120px;
+      object-fit: contain;
+      filter: grayscale(100%);
+      display: block; // Ensures images behave like block-level elements
+      margin: auto; // Centers the image horizontally
+  
+      &:hover {
+        filter: grayscale(0);
+      }
     }
-    
-}
+  }
+  
+  // Media query for small screens
+  @media (max-width: 640px) {
+    .Card {
+      padding: 1rem 20px; // Adjust padding for small screens
+    }
+  
+    .mySwiper {
+      img {
+        height: auto; // Maintain aspect ratio
+        width: 90%; // Zoom image to 90% of its container's width
+        max-width: none; // Ensure the image doesn't get limited by default constraints
+      }
+    }
+  }
+  

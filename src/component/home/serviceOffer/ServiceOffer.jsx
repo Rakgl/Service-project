@@ -45,15 +45,15 @@ const ServiceOffer = () => {
   ];
 
   return (
-    <div className='big-bg'>
-      <div className="widthPC-90 m-auto py-5 ">
+    <div className='big-bg px-10'>
+      <div className="m-auto py-5 ">
         <div className="d-flex mb-4 j-sb">
           <div className='widthPC-60'>
             <h4 className='text-primary'>Service</h4>
             <h1 className='text-white'>Services We Offer</h1>
             <p className='text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias itaque minima commodi, repudiandae facere adipisci voluptatibus corporis nobis perferendis iste.</p>
           </div>
-          <button type="button" class="heightPx-50 btn btn-primary">Primary</button>
+          <button type="button" class="heightPx-50 btn btn-primary">See all services</button>
         </div>
         <div className="grid-container">
           {serviceOffer.map((data) => (
@@ -61,7 +61,7 @@ const ServiceOffer = () => {
               <div className="font-lg text-primary">{data.icon}</div>
               <h1 className="font-md font-weight500 text-white">{data.title}</h1>
               <p className='text-white'>{data.des}</p>
-              <Link to="#" className="font-sizePx16 text-primary"><span>Read More</span></Link>
+              <Link to="#" className="font-sizePx20 text-primary"><span>Read More</span></Link>
             </div>
           ))}
         </div>
