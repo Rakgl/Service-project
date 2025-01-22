@@ -1,6 +1,5 @@
 .main-container{
     height: 900px;
-    background-color: #070923;
     .half-container{
         h6{
         color: #09AFF4;
@@ -47,20 +46,6 @@
         .mt-10{
             margin-left: 40px;
             margin-top: 60px;
-        }
-        .btn-outline-primary{
-            border-color: #09AFF4;
-            color: #09AFF4;
-            font-size: 15px;
-            border: 2px solid #09AFF4; 
-            border-radius: 0 20px 0 20px;
-            height: 50px;
-            width: 170px;
-            font-weight: 700;
-            &:hover{
-                background-color: #09AFF4;
-                color: white;
-            }
         }
     }
 }
@@ -123,7 +108,7 @@
         }
         .btn-outline-primary{
             margin-bottom: 20px;
-        }    
+        }
     }
     .px-10{
         padding: 0 100px 0 100px;

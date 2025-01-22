@@ -2,9 +2,10 @@ import  { useRef, useEffect } from 'react';
 import './banner.scss';
 import Illustration from '../../../assets/home/illustration-3.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faYoutube, faInstagram, faXTwitter, faGgCircle, faGooglePlay  } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faYoutube, faInstagram, faXTwitter, faGgCircle  } from '@fortawesome/free-brands-svg-icons';
 import { faPlay  } from '@fortawesome/free-solid-svg-icons';
 import ZigZac from '../../../assets/home/zig-zac.png'
+import Button from '../../button/Button';
 const MainBanner = () => {
     const imageHolderRef = useRef(null);
     let currentRotateX = 0;
@@ -88,7 +89,7 @@ const MainBanner = () => {
             </p>
           </div>
           <div className='d-flex'>
-            <button type="button" className="btn btn-outline-primary">Start Now</button>
+            <Button>Start Now</Button>
             <button type="button" className='round-button' data-bs-toggle="modal" data-bs-target="#youtubeModal">
               <span><FontAwesomeIcon icon={faPlay} /></span>
             </button>

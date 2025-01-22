@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGgCircle  } from '@fortawesome/free-brands-svg-icons';
 import WhyChoose from '../../../assets/home/why-choose-us.png'
 import AOS from "aos";
+import Button from '../../button/Button';
 
 const WhyChooseUs = () => {
     const imageHolderRef = useRef(null);
@@ -111,10 +112,10 @@ const WhyChooseUs = () => {
                     </div>
                 ))}
             </div>
-            <button type="button" className="btn btn-outline-primary">Get In Touch</button>
+            <Button>Get In Touch</Button>
         </div>
       </div>
     );
   };
 
-export default WhyChooseUs;
+export default WhyChooseUs; 
