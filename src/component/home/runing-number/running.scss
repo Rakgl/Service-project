@@ -1,29 +1,42 @@
-.background{
+.background {
     background-image: url('../../../assets/pattern-bg-3.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     align-content: center;
-}
-.opa{
+  }
+  
+  .opa {
     min-height: 400px;
     width: 100%;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.778);
     opacity: 0.5;
-    padding: 2rem 0;
+    padding: 2rem 70px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     gap: 2rem;
 }
-@media(max-width: 1024px){
-    .opa{
-        flex-wrap: wrap;
+.borderr{
+    border: 1px solid gray;
+    border-top: 5px solid #04b4ff;
+    border-radius: 2px 2px 5px 5px;
+}
+  
+  @media (max-width: 1024px) {
+    .opa {
+      flex-wrap: wrap;
+      flex-direction: column; // Stack the boxes vertically
+      align-items: center;   // Center align the boxes horizontally
+      justify-content: center; // Center align the boxes vertically
+      gap: 1.5rem;            // Adjust gap between the boxes
     }
-}
-.fontlg{
+  }
+  .fontlg {
     font-size: 45px;
-}
-.heightPx{
+  }
+  
+  .heightPx {
     height: 210px;
-}
+  }
+  

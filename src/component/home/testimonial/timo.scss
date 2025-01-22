@@ -1,5 +1,41 @@
-.myySwiper{
-    height: 400px;
-    width: 80%;
-    margin: auto;
+.swipies{
+    background-image: url('../../../assets/1bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // opacity: 0.7;
 }
+.myySwiper {
+    height: 600px;
+    padding: 0 150px;
+    width: 80%; // Default width for larger screens
+    margin: 0 auto; // Center the Swiper horizontally
+  
+    .myswip {
+        width: 100%;
+        // padding: 0 100px;
+        // margin: auto;
+        align-content: center;
+    }
+  
+    .al-center {
+      display: flex;
+    }
+  
+    h5 {
+      margin: 2rem 0;
+    }
+    .swipaa{
+        width: 100%;
+        background-color: aqua;
+    }
+  }
+  
+  // Media query for small screens
+  @media (max-width: 768px) {
+    .myySwiper {
+      width: 100%; // Full width for small screens
+      padding: 0 30px; // Adjust padding for smaller screens
+    }
+  }
+  

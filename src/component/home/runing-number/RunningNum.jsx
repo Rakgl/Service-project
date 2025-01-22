@@ -68,7 +68,7 @@ const RunningNum = () => {
         {counters.map((counter, index) => (
           <div
             key={counter.id}
-            className="heightPx widthPx-230 border border-primary columnCC text-white rounded text-center mr-4 "
+            className="heightPx widthPx-230 borderr columnCC text-white text-center mr-4 "
           >
             <div className='font-lg text-primary'>{counter.icon}</div>
             <div id="counter" className="fontlg font-weight text-white">
