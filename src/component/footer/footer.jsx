@@ -1,13 +1,11 @@
-import 'react';
 import './footer.scss';
 import Logo from '../../assets/logo-colored.png';
 import { Link } from 'react-router-dom';
 
-
 const Footer = () => {
   return (
     <>
-      <footer className="footer text-light footer-img">
+      <footer className="footer text-light footer-img mt-5">
         <div className="px-10">
           <div className="row gy-4 d-flex justify-content-between">
             <div className="col-lg-4">
@@ -162,7 +160,7 @@ const Footer = () => {
           </div>
 
           <div className="d-flex justify-content-between mt-5">
-            <p className="mb-0">&copy; 2024 Created by Rak</p>
+            <p className="mb-0">&copy; 2025 Created by Rak</p>
             <p>Terms of use | Privacy Policy</p>
           </div>
         </div>

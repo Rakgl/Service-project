@@ -9,7 +9,6 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const [isSticky, setIsSticky] = useState(false);
-
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') || 'light';
     setTheme(savedTheme);
@@ -49,14 +48,14 @@ const Header = () => {
 
   return (
     <>
-      <header className={`px-10 header ${isSticky ? 'sticky' : ''}`}>
+      <header className={`header ${isSticky ? 'sticky' : ''}`}>
         <nav className="navbar navbar-expand-lg">
-          <div className="container-fluid px-10">
+          <div className="container-fluid">
             <Link className="navbar-brand" to="/app">
               <img
                 src={theme === 'dark' ? LogoDark : LogoLight}
                 alt="Logo"
-                style={{ height: '50px' }}
+                style={{ height: '40px' }}
               />
             </Link>
             <button
@@ -70,17 +69,10 @@ const Header = () => {
               <span className="navbar-toggler-icon"></span>
             </button>
             <div
-              className={`collapse navbar-collapse justify-content-center ${menuOpen ? 'show' : ''}`}
+              className={`collapse navbar-collapse ${menuOpen ? 'show' : ''}`}
               id="navbarNav"
-              style={{
-                backgroundColor: menuOpen
-                  ? theme === 'dark'
-                    ? '#343a40'
-                    : '#f8f9fa'
-                  : 'transparent',
-              }} // Added background color
             >
-              <ul className="navbar-nav mb-lg-0">
+              <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
                   <Link className={getLinkClass('/about')} to="/about">
                     About
@@ -111,14 +103,16 @@ const Header = () => {
                     Contact Us
                   </Link>
                 </li>
+                <button
+                  className={`btn theme-selector ms-2 ${
+                    theme === 'dark' ? 'btn-dark' : 'btn-light'
+                  }`}
+                  onClick={saveTheme}
+                >
+                  {theme === 'dark' ? 'Light' : 'Dark'}
+                </button>
               </ul>
             </div>
-            <button
-              className={`btn theme-selector ms-2 ${theme === 'dark' ? 'btn-dark' : 'btn-light'}`}
-              onClick={saveTheme}
-            >
-              {theme === 'dark' ? 'Light' : 'Dark'}
-            </button>
           </div>
         </nav>
       </header>
