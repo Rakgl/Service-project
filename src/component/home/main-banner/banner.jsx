@@ -60,62 +60,64 @@ const MainBanner = () => {
     }, []);
   
     return (
-      <div className='row main-banner px-10'>
-        <div id="stars-container">
-          <div id='stars'></div>
-          <div id='stars2'></div>
-          <div id='stars3'></div>
-        </div>
+      <>
+        <div className='row main-banner px-10'>
+          <div id="stars-container">
+            <div id='stars'></div>
+            <div id='stars2'></div>
+            <div id='stars3'></div>
+          </div>
 
-        <div className='col-xl-6 col-lg-5 col-sm-12 banner-side pt-10'>
-          <div className='line-icon d-flex justify-content-between'>
-            <FontAwesomeIcon icon={faFacebook} />
-            <FontAwesomeIcon icon={faYoutube} />
-            <FontAwesomeIcon icon={faInstagram} />
-            <FontAwesomeIcon icon={faXTwitter} />
-          </div>
-          <div className='mt-3'>
-            <h6><FontAwesomeIcon icon={faGgCircle} />&nbsp;&nbsp;IT SOLUTION&nbsp;&nbsp;<FontAwesomeIcon icon={faGgCircle} /></h6>
-          </div>
-          <div className='big-letter'>
-            <h1>
-              Providing Best Services & IT <span style={{ color: "#09AFF4" }}>solutions</span>
-            </h1>
-            <img src={ZigZac}/>
-          </div>
-          <div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed architecto dolorum inventore totam adipisci
-            </p>
-          </div>
-          <div className='d-flex'>
-            <Button>Start Now</Button>
-            <button type="button" className='round-button' data-bs-toggle="modal" data-bs-target="#youtubeModal">
-              <span><FontAwesomeIcon icon={faPlay} /></span>
-            </button>
+          <div className='col-xl-6 col-lg-5 col-sm-12 banner-side pt-10'>
+            <div className='line-icon d-flex justify-content-between'>
+              <FontAwesomeIcon icon={faFacebook} />
+              <FontAwesomeIcon icon={faYoutube} />
+              <FontAwesomeIcon icon={faInstagram} />
+              <FontAwesomeIcon icon={faXTwitter} />
+            </div>
+            <div className='mt-3'>
+              <h6><FontAwesomeIcon icon={faGgCircle} />&nbsp;&nbsp;IT SOLUTION&nbsp;&nbsp;<FontAwesomeIcon icon={faGgCircle} /></h6>
+            </div>
+            <div className='big-letter'>
+              <h1>
+                Providing Best Services & IT <span style={{ color: "#09AFF4" }}>solutions</span>
+              </h1>
+              <img src={ZigZac}/>
+            </div>
+            <div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed architecto dolorum inventore totam adipisci
+              </p>
+            </div>
+            <div className='d-flex'>
+              <Button>Start Now</Button>
+              <button type="button" className='round-button' data-bs-toggle="modal" data-bs-target="#youtubeModal">
+                <span><FontAwesomeIcon icon={faPlay} /></span>
+              </button>
 
-            <div className="modal fade" id="youtubeModal" tabIndex="-1" aria-labelledby="youtubeModalLabel" aria-hidden="true">
-                <div className="modal-dialog modal-lg">
-                    <div className="modal-content">
-                        <div className="modal-header">
-                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div className="modal-body">
-                            <div className="ratio ratio-16x9">
-                              <iframe width="560" height="315" src="https://www.youtube.com/embed/qP23O70ve7k?si=HyPjkYQ8NNRFlHdF" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              <div className="modal fade" id="youtubeModal" tabIndex="-1" aria-labelledby="youtubeModalLabel" aria-hidden="true">
+                  <div className="modal-dialog modal-lg">
+                      <div className="modal-content">
+                          <div className="modal-header">
+                              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div className="modal-body">
+                              <div className="ratio ratio-16x9">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/qP23O70ve7k?si=HyPjkYQ8NNRFlHdF" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div className='col-xl-6 col-lg-7 col-sm-12 banner-side rowCC'>
+            <div className='image-holder' ref={imageHolderRef}>
+              <img src={Illustration} alt="Illustrat" />
             </div>
           </div>
         </div>
-        <div className='col-xl-6 col-lg-7 col-sm-12 banner-side rowCC'>
-          <div className='image-holder' ref={imageHolderRef}>
-            <img src={Illustration} alt="Illustrat" />
-          </div>
-        </div>
-      </div>
+      </>
     );
   };
 
