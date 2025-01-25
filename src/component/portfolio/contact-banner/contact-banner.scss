@@ -1,0 +1,65 @@
+.contact-banner{
+    position: relative;
+    width: 100%;
+    height: 555px;
+    margin-bottom: -48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h6{
+        font-size: 20px;
+        color: #09AFF4;
+        margin-bottom: 0;
+    }
+    .cover{
+        z-index: -3;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 0, 78);
+    }
+    img{
+        z-index: -3;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0.4;
+        object-fit: cover;
+    }
+    .letter-holder{
+        text-align: center;
+        width: 400px;
+        .mt-3{
+            color: white;
+            border: 2px solid white;
+            &:hover{
+                border: 2px solid #09AFF4;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1355px) {
+    .contact-banner{
+        width: 100%;
+        height: 455px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .contact-banner{
+        width: 100%;
+        height: 355px;
+    }
+}
+@media screen and (max-width: 990px) {
+    .contact-banner{
+        width: 100%;
+        height: 300px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .contact-banner{
+        width: 100%;
+        height: 270px;
+    }
+}

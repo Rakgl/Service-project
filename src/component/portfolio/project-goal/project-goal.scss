@@ -1,16 +1,19 @@
 .project-goal{
     width: 100%;
-    margin-bottom: 100px;
+    p{
+        font-size: 20px;
+    }
     .top{
-        p{
-            font-size: 20px;
-        }
         .Img-top{
             width: 100%;
             height: 450px;
             border-radius: 10px;
-            background-image: url(../../../assets/portfolio/image-banner.jpg);
+            background-image: url(../../../assets/portfolio/study.jpg);
             background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             .round-button{
                 width: 50px;
                 height: 50px;
@@ -21,6 +24,111 @@
                 color: white;
                 animation: pulse 2s infinite;
             }
+        }
+    }
+    .project-step{
+        height: 380px;
+        .left{
+            display: flex;
+            align-items: center;
+            ul{
+                padding-left: 0;
+                li{
+                    margin-top: 10px;
+                }
+            }
+            .heh{
+                color: #09AFF4;
+                font-size: 12px;
+                margin-right: 10px;
+            }
+        }
+        .right{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 325px;
+                height: 325px;
+            }
+        }
+    }
+    .hold-swiper{
+        height: 400px;
+        .pic{
+            position: relative;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+            .bottom{
+                padding: 8px 0px 0px 60px;
+                position: absolute;
+                width: 100%;
+                height: 50px;
+                background-color: rgba(0, 0, 139, 0.353);
+                color: white;
+                font-size: 20px;
+                transition: 0.5s;
+                bottom: -50px;
+            }
+            .bottom-left{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 25px;
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                bottom: 0;
+                left: -50px;
+                transition: 0.5s;
+                background-color: #0888bf;
+            }
+            &:hover{
+                .bottom{
+                    bottom: 0;
+                    transition: 0.5s;
+                }
+                .bottom-left{
+                    left: 0;
+                    transition: 0.7s;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1355px) {
+    .project-goal{
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .project-goal{
+        .top{
+            .Img-top{
+                height: 380px;
+            }
+        }
+        .hold-swiper{
+            height: 350px;
+        }
+    }
+}
+@media screen and (max-width: 1000px) {
+    .project-goal{
+        p{
+            font-size: 16px;
+        }
+        .top{
+            .Img-top{
+                height: 350px;
+            }
+        }
+        .project-step{
+            height: auto;
         }
     }
 }
