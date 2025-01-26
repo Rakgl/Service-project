@@ -1,0 +1,34 @@
+// src/components/PropHeader.scss
+.prop-header {
+    padding: 11% 0;
+    text-align: center;
+  
+    &__content {
+      position: relative;
+    }
+  
+    &__title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  
+    &__breadcrumbs {
+      font-size: 0.875rem;
+  
+      .prop-header__link {
+        text-decoration: none;
+        color: inherit;
+        transition: color 0.2s;
+  
+        &:hover {
+          color: rgb(5, 9, 230);
+        }
+      }
+  
+      .prop-header__text {
+        color: inherit;
+      }
+    }
+  }
+  
