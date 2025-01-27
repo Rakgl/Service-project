@@ -2,6 +2,22 @@
 .prop-header {
     padding: 11% 0;
     text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+    url("../../../assets/aboutbg.png");
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+
+    .prop-header__link{
+      font-size: 18px;
+      font-weight: 800;
+    }
+    .prop-header__text{
+      font-size: 18px;
+      font-weight: 800;
+    }
   
     &__content {
       position: relative;

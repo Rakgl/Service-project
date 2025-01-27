@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './header.scss';
-import LogoDark from '../../assets/logo-dark.png';
 import LogoLight from '../../assets/logo-light.png';
 
 const Header = () => {
@@ -53,7 +52,7 @@ const Header = () => {
           <div className="container-fluid">
             <Link className="navbar-brand" to="/app">
               <img
-                src={theme === 'dark' ? LogoDark : LogoLight}
+                src={LogoLight}
                 alt="Logo"
                 style={{ height: '40px' }}
               />

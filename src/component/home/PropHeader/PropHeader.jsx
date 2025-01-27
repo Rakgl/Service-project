@@ -1,5 +1,7 @@
 import "./PropHeader.scss";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 const PropHeader = ({ title, breadcrumbs }) => {
   return (
     
@@ -10,9 +12,9 @@ const PropHeader = ({ title, breadcrumbs }) => {
           {breadcrumbs.map((crumb, index) => (
             <span key={index} className="prop-header__breadcrumb">
               {crumb.link ? (
-                <a href={crumb.link} className="prop-header__link">
-                  {crumb.label}
-                </a>
+                <Link href={crumb.link} className="prop-header__link">
+                   <FontAwesomeIcon icon={faHouse} /> {crumb.label}
+                </Link>
               ) : (
                 <span className="prop-header__text">{crumb.label}</span>
               )}
