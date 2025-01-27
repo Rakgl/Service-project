@@ -1,7 +1,17 @@
 // src/components/PropHeader.scss
 .prop-header {
+    // background: url("../../../assets/aboutbg.png");
     padding: 11% 0;
     text-align: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../../../assets/aboutbg.png");
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
   
     &__content {
       position: relative;
