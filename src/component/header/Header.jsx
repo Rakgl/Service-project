@@ -75,7 +75,7 @@ const Header = () => {
               <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
                   <Link className={getLinkClass('/about')} to="/about">
-                    About
+                    About Us
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -105,7 +105,7 @@ const Header = () => {
                 </li>
                 <button
                   className={`custom-btn btn theme-selector ms-2 ${
-                    theme === 'dark' ? 'btn-dark' : 'btn-light'
+                    theme === 'light' ? 'btn-dark' : 'btn-light'
                   }`}
                   onClick={saveTheme}
                 >
