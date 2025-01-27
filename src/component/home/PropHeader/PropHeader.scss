@@ -2,7 +2,10 @@
 .prop-header {
     padding: 11% 0;
     text-align: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), transparent), 
+    linear-gradient(transparent, rgba(0, 0, 0, 0.2)),
+    linear-gradient(to right, rgba(0, 0, 0, 0.2), transparent),
+    linear-gradient(to left, rgba(0, 0, 0, 0.2), transparent),
     url("../../../assets/aboutbg.png");
     background-size: cover;
     object-fit: cover;
@@ -36,10 +39,6 @@
         text-decoration: none;
         color: inherit;
         transition: color 0.2s;
-  
-        &:hover {
-          color: rgb(5, 9, 230);
-        }
       }
   
       .prop-header__text {
