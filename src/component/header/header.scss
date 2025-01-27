@@ -13,7 +13,7 @@
 
   &sticky{
     position: static;
-    background-color: darken($primary-color, 10%);
+    background-color: ($primary-color, 10%);
   }
   .navbar {
     .navbar-brand img {
@@ -38,9 +38,13 @@
         flex-direction: row;
       }
 
-      .nav-item {
-        
+      .custom-btn{
+        padding: 0 15px;
+        width: 80px;
+      }
 
+      .nav-item {
+        font-weight: 800;
         @media (min-width: 768px) {
           margin: 0 1rem;
         }

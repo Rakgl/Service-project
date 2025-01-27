@@ -2,6 +2,7 @@ import React from 'react';
 import ImageBanner from '../component/portfolio/image-banner/Image-banner';
 import ProjectGoal from '../component/portfolio/project-goal/project-goal';
 import SideCard from '../component/portfolio/side-card/Side-card';
+import Scroll from "../component/scroll-up/Scroll";
 import ContactBanner from '../component/portfolio/contact-banner/Contact-banner';
 
 
@@ -19,6 +20,7 @@ const Portfolio = () => {
         </div>
       </div>
       <ContactBanner/>
+      <Scroll/>
     </div>
     </>
   );

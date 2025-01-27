@@ -8,6 +8,7 @@ import PricingPlans from '../component/home/PricingPlans/PricingPlans'
 import RunningNum from '../component/home/runing-number/RunningNum';
 import ServiceOffer from '../component/home/serviceOffer/ServiceOffer';
 import TestiMo from '../component/home/testimonial/TestiMo';
+import Scroll from '../component/scroll-up/Scroll';
 const HomePage = () => {
   return (
     <>
@@ -21,6 +22,7 @@ const HomePage = () => {
         <TestiMo/>
         <PricingPlans />
         <LatestNews />
+        <Scroll />
       </div>
     </>
   );
