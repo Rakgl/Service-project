@@ -32,8 +32,8 @@ const ProjectGoal = () => {
         <div className='project-goal'>
           <div className="top">
             <h1 className='mb-3'><b>Project Goal</b></h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam unde, alias deserunt nemo perspiciatis cum delectus deleniti repudiandae aliquam exercitationem veniam ipsam incidunt sequi ipsum tenetur. Consequuntur dolorum suscipit eos.</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam unde, alias deserunt nemo perspiciatis cum delectus deleniti repudiandae aliquam exercitationem veniam ipsam incidunt sequi ipsum tenetur. Consequuntur dolorum suscipit eos. deleniti repudiandae aliquam exercitationem veniam ipsam incidunt sequi ipsum tenetur. Consequuntur dolorum suscipit eos.</p>
+            <p>Our project goal is to deliver exceptional results by aligning innovative solutions with your unique needs. We focus on achieving measurable outcomes, such as improving efficiency, driving growth, and creating value.</p>
+            <p>Our primary project goal is to transform your vision into reality by providing innovative, efficient, and results-driven solutions. From the initial planning phase to final implementation, we focus on Clear Objective Setting, Strategic Planning, Collaboration, Results-Driven Execution, Sustainability.</p>
             <div className='Img-top'>
               <button type="button" className='round-button' data-bs-toggle="modal" data-bs-target="#youtubeModal">
                 <span><FontAwesomeIcon icon={faPlay} /></span>
@@ -56,19 +56,19 @@ const ProjectGoal = () => {
             </div>
           </div>
           <div className="project-overview">
-            <h1 className='mb-3 mt-5'><b>Project Goal</b></h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam unde, alias deserunt nemo perspiciatis cum delectus deleniti repudiandae aliquam exercitationem veniam ipsam</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam unde, alias deserunt nemo perspiciatis cum delectus deleniti repudiandae aliquam exercitationem veniam ipsam incidunt sequi ipsum tenetur. Consequuntur dolorum suscipit eos. deleniti repudiandae aliquam exercitationem veniam ipsam</p>
+            <h1 className='mb-3 mt-5'><b>Project Overview</b></h1>
+            <p>Our project focuses on delivering a comprehensive solution that addresses the core needs and challenges of your business. By combining industry expertise with cutting-edge technology, we aim to streamline processes, improve operational efficiency, and drive growth.</p>
+            <p>The solution we develop will be tailored specifically to your needs, ensuring a seamless integration into your existing systems and processes. With a clear focus on achieving long-term success, we’ll provide continuous support and improvements to ensure sustainability.</p>
           </div>
           <div className="project-step row">
             <div className="left col-lg-6 col-md-12">
               <div>
                 <h1 className='mb-3'><b>Project Steps</b></h1>
                 <ul type="none">
-                  <li><FontAwesomeIcon icon={faCheck} className='heh'/>ipsum dolor sit amet consectetur adipisicing</li>
-                  <li><FontAwesomeIcon icon={faCheck} className='heh'/>quas, ea fuga vel quis officiis laborum quaerat</li>
-                  <li><FontAwesomeIcon icon={faCheck} className='heh'/>alias fugiat aliquam soluta beatae numquam</li>
-                  <li><FontAwesomeIcon icon={faCheck} className='heh'/>nobis maiores inventore harum pariatur possimus</li>
+                  <li><FontAwesomeIcon icon={faCheck} className='heh'/>Planning and Discovery</li>
+                  <li><FontAwesomeIcon icon={faCheck} className='heh'/>Design and Development</li>
+                  <li><FontAwesomeIcon icon={faCheck} className='heh'/>Testing and Quality Assurance</li>
+                  <li><FontAwesomeIcon icon={faCheck} className='heh'/>Implementation and Support</li>
                 </ul>
               </div>
             </div>
@@ -78,7 +78,7 @@ const ProjectGoal = () => {
           </div>
           <div className="project-result">
             <h1 className='mb-3'><b>Project Results</b></h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam unde, alias deserunt nemo perspiciatis cum delectus deleniti repudiandae aliquam exercitationem veniam ipsam deleniti repudiandae aliqua</p>
+            <p>Upon completion of the project, the results will be clear and impactful. By implementing tailored solutions, we expect significant improvements in operational efficiency, cost savings, and business growth.</p>
             <div>
               <Swiper
                 className='hold-swiper'
