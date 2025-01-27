@@ -1,19 +1,8 @@
 @use '../../styles/variables' as *;
-:root {
-  /* Font sizes */
-  --text-xl: 1.5rem;
-  --text-base: 1rem;
-  --text-sm: 0.875rem;
-
-  /* Spacing */
-  --spacing-xl: 80px;
-  --spacing-lg: 40px;
-  --spacing-md: 20px;
-  --spacing-sm: 12px;
-}
 
 .footer-img {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/src/assets/home/download.jpeg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('/src/assets/home/download.jpeg');
   background-size: cover;
   object-fit: cover;
   background-position: center;
@@ -23,4 +12,32 @@
 
 .useful-links ul li {
   margin-bottom: 15px;
+}
+
+.list-unstyled {
+  .line-icon {
+    color: white;
+
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $primary-color;
+      height: 30px;
+      width: 30px;
+      border-radius: 10%;
+      font-size: 20px;
+      &:hover {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .icon {
+    color: $primary-color;
+  }
+  a:hover {
+    margin-left: 10px;
+    transition: 1s ease;
+    behavior: smooth;
+  }
 }

@@ -1,6 +1,14 @@
 import './footer.scss';
 import Logo from '../../assets/logo-colored.png';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import {
+  faFacebook,
+  faYoutube,
+  faInstagram,
+  faXTwitter,
+} from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
@@ -38,41 +46,45 @@ const Footer = () => {
               <h5>Useful Links</h5>
               <ul className="list-unstyled">
                 <li className="mt-4">
+                  <FontAwesomeIcon className="icon" icon={faArrowRight} />
                   <a
                     href="https://www.google.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-light text-decoration-none"
+                    className="text-light text-decoration-none p-2"
                   >
                     Google
                   </a>
                 </li>
                 <li>
+                  <FontAwesomeIcon className="icon" icon={faArrowRight} />
                   <a
                     href="https://www.dribbble.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-light text-decoration-none"
+                    className="text-light text-decoration-none p-2"
                   >
                     Dribbble
                   </a>
                 </li>
                 <li>
+                  <FontAwesomeIcon className="icon" icon={faArrowRight} />
                   <a
                     href="https://www.linkedin.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-light text-decoration-none"
+                    className="text-light text-decoration-none p-2"
                   >
                     LinkedIn
                   </a>
                 </li>
                 <li>
+                  <FontAwesomeIcon className="icon" icon={faArrowRight} />
                   <a
                     href="https://www.wikipedia.org"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-light text-decoration-none"
+                    className="text-light text-decoration-none p-2"
                   >
                     Wikipedia
                   </a>
@@ -85,33 +97,39 @@ const Footer = () => {
               <h5>Resources</h5>
               <ul className="list-unstyled">
                 <li className="mt-4">
+                  <FontAwesomeIcon className="icon" icon={faArrowRight} />
                   <Link
                     to="/support"
-                    className="text-light text-decoration-none"
+                    className="text-light text-decoration-none p-2"
                   >
                     Support
                   </Link>
                 </li>
                 <li>
+                  <FontAwesomeIcon className="icon" icon={faArrowRight} />
                   <Link
                     to="/dashboard"
-                    className="text-light text-decoration-none"
+                    className="text-light text-decoration-none p-2"
                   >
                     Dashboard
                   </Link>
                 </li>
                 <li>
+                  <FontAwesomeIcon className="icon" icon={faArrowRight} />
+
                   <Link
                     to="/drivers"
-                    className="text-light text-decoration-none"
+                    className="text-light text-decoration-none p-2"
                   >
                     Drivers
                   </Link>
                 </li>
                 <li>
+                  <FontAwesomeIcon className="icon" icon={faArrowRight} />
+
                   <Link
                     to="/projects"
-                    className="text-light text-decoration-none"
+                    className="text-light text-decoration-none p-2"
                   >
                     Projects
                   </Link>
@@ -124,37 +142,49 @@ const Footer = () => {
               <h5>Contact Information</h5>
               <ul className="list-unstyled">
                 <li className="mt-4">
+                  <FontAwesomeIcon className="icon" icon={faArrowRight} />
+
                   <Link
                     to="/branding"
-                    className="text-light text-decoration-none"
+                    className="text-light text-decoration-none p-2"
                   >
-                    Branding
+                    info@gmail.com
                   </Link>
                 </li>
                 <li>
+                  <FontAwesomeIcon className="icon" icon={faArrowRight} />
+
                   <Link
                     to="/design"
-                    className="text-light text-decoration-none"
+                    className="text-light text-decoration-none p-2"
                   >
-                    Design
+                    +880 123 456 789
                   </Link>
                 </li>
                 <li>
+                  <FontAwesomeIcon className="icon" icon={faArrowRight} />
+
                   <Link
                     to="/marketing"
-                    className="text-light text-decoration-none"
+                    className="text-light text-decoration-none p-2"
                   >
-                    Marketing
+                    123, New York, USA
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    to="/advertisement"
-                    className="text-light text-decoration-none"
-                  >
-                    Advertisement
-                  </Link>
-                </li>
+                <div className="line-icon mt-5 d-flex justify-content-between">
+                  <div className="box">
+                    <FontAwesomeIcon icon={faFacebook} />
+                  </div>
+                  <div className="box">
+                    <FontAwesomeIcon icon={faYoutube} />
+                  </div>
+                  <div className="box">
+                    <FontAwesomeIcon icon={faInstagram} />
+                  </div>
+                  <div className="box">
+                    <FontAwesomeIcon icon={faXTwitter} />
+                  </div>
+                </div>
               </ul>
             </div>
           </div>
