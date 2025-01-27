@@ -86,7 +86,7 @@ const MainBanner = () => {
             </div>
             <div>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed architecto dolorum inventore totam adipisci
+                We specialize in delivering cutting-edge IT solutions that drive innovation and efficiency for businesses of all sizes.
               </p>
             </div>
             <div className='d-flex'>
