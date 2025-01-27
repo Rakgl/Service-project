@@ -9,13 +9,13 @@
   box-sizing: border-box;
 }
 
-body.light {
+body.dark {
   color: $text-color;
   // background-color: $background-color;
 }
 
 /* Apply dark theme styles */
-body.dark {
+body.light {
   color: $muted-text-color;
   background-color: black;
 }

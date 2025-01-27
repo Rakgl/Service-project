@@ -28,7 +28,8 @@
       border-radius: 10%;
       font-size: 20px;
       &:hover {
-        margin-bottom: 10px;
+        transform: translateY(-10px);
+        transition: 1.5s ease;
       }
     }
   }
