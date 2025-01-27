@@ -1,5 +1,6 @@
 import "./PropHeader.scss";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
 const PropHeader = ({ title, breadcrumbs }) => {
   return (
     
@@ -11,7 +12,7 @@ const PropHeader = ({ title, breadcrumbs }) => {
             <span key={index} className="prop-header__breadcrumb">
               {crumb.link ? (
                 <a href={crumb.link} className="prop-header__link">
-                  {crumb.label}
+                   <FontAwesomeIcon icon={faHouse} /> {crumb.label}
                 </a>
               ) : (
                 <span className="prop-header__text">{crumb.label}</span>
