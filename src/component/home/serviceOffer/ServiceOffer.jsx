@@ -53,7 +53,7 @@ const ServiceOffer = () => {
             <h1>Services We Offer</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias itaque minima commodi, repudiandae facere adipisci voluptatibus corporis nobis perferendis iste.</p>
           </div>
-          <button type="button" class="heightPx-50 btn btn-primary">See all services</button>
+          <button type="button" className="heightPx-50 btn btn-primary">See all services</button>
         </div>
         <div className="grid-container" data-aos="fade-up" data-aos-duration="1000">
           {serviceOffer.map((data) => (

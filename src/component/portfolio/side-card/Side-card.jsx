@@ -17,7 +17,7 @@ const ProjectGoal = () => {
           <div className="top col-12">
             <div className="left">
               <h5>CLIENT</h5>
-              <p>Amin Themes</p>
+              <p>Admin Themes</p>
             </div>
             <div className="right">
               <span><FontAwesomeIcon icon={faIdCard} /></span>

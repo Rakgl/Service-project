@@ -16,19 +16,22 @@ const WhyChooseUs = () => {
     let currentRotateY = 0;
     const fields = [
         {
-            num: "01.",
+          id: 1,
+          num: "01.",
           title: "Latest Technologies",
-          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati."
+          description: "We stay ahead of the curve by leveraging the latest technologies to deliver innovative solutions that empower your business."
         },
         {
-            num: "02.",
-          title: "Uniqe Solutions",
-          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati."
+          id: 2,
+          num: "02.",
+          title: "Unique Solutions",
+          description: "We understand that every business is different, which is why we offer tailored solutions designed to meet your unique challenges."
         },
         {
-            num: "03.",
+          id: 3,
+          num: "03.",
           title: "Powerful Strategies",
-          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati."
+          description: "Success starts with a strong strategy. Our team develops powerful, data-driven strategies that deliver measurable results."
         },
       ];
     
@@ -100,11 +103,11 @@ const WhyChooseUs = () => {
                   <h1 className='font-lg'>Why Our Customers Choose <span style={{ color: "#09AFF4" }}>Working</span> With Us </h1>
               </div>
               <div>
-                  <p className='font-sizePx18 mt-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. A officia molestiae dolorum tempora ut accusamus cupiditate! Nesciunt tempora reiciendis libero voluptate!</p>
+                  <p className='font-sizePx18 mt-4'>Our customers choose us because we deliver more than just services – we provide solutions that drive results.</p>
               </div>
               <div className='row contain-field'>
-                  {fields.map((field, index) => (
-                      <div className="col-12 field" key={index}>
+                  {fields.map((field) => (
+                      <div className="col-12 field" key={field.id}>
                           <div className="row">
                               <div className="col-3 box">
                                   <strong>{field.num}</strong>
