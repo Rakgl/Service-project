@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Scroll from '../component/scroll-up/Scroll';
 
 const Pages = () => {
   return (
-    <div>Pages</div>
-  )
-}
+    <>
+      <div>Pages</div>
+      <Scroll />
+    </>
+  );
+};
 
-export default Pages
+export default Pages;

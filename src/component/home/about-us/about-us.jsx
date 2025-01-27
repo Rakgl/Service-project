@@ -17,24 +17,28 @@ const HomeAboutUs = () => {
     let currentRotateY = 0;
     const fields = [
         {
+          id: 1,
           icon: faMedal,
           title: "First On Field",
-          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, iste."
+          description: "With an almost 10year worth of experience on the field, We are your best partner."
         },
         {
+          id: 2,
           icon: faGamepad,
           title: "Easy To Reach",
-          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, iste."
+          description: "With multiple channels of communication, a responsive support team. You can reach us anytime"
         },
         {
+          id: 3,
           icon: faMapMarkedAlt,
           title: "Worldwide Services",
-          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, iste."
+          description: "We digital company can be working with anyone from any part of the world."
         },
         {
+          id: 4,
           icon: faGears,
           title: "24/7 Support",
-          description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, iste."
+          description: "we're here to ensure uninterrupted service and peace of mind. Count on us anytime, day or night!"
         }
       ];
     
@@ -96,11 +100,11 @@ const HomeAboutUs = () => {
                 <h1 className='font-lg'>Trusted By Worldwide Clients Since <span style={{ color: "#09AFF4" }}>1980.</span></h1>
             </div>
             <div>
-                <p className='font-sizePx18 mt-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. A officia molestiae dolorum tempora ut accusamus cupiditate! Nesciunt tempora reiciendis libero voluptate!</p>
+                <p className='font-sizePx18 mt-4'>With over a decades of experience, we’ve built a reputation for delivering exceptional service and innovative solutions to clients around the globe. Our long-standing relationships with industry leaders and businesses of all sizes demonstrate our commitment to quality, trust, and results.</p>
             </div>
             <div className='row contain-field'>
-                {fields.map((field, index) => (
-                    <div className="col-xxl-6 col-xl-6 field" key={index}>
+                {fields.map((field) => (
+                    <div className="col-xxl-6 col-xl-6 field" key={field.id}>
                         <div className="row">
                             <div className="col-3 box btn">
                             <FontAwesomeIcon icon={field.icon} />

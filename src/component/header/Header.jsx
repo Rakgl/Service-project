@@ -104,7 +104,7 @@ const Header = () => {
                   </Link>
                 </li>
                 <button
-                  className={`btn theme-selector ms-2 ${
+                  className={`custom-btn btn theme-selector ms-2 ${
                     theme === 'dark' ? 'btn-dark' : 'btn-light'
                   }`}
                   onClick={saveTheme}

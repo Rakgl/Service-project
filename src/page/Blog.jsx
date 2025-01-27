@@ -1,8 +1,12 @@
 import React from 'react'
+import Scroll from "../component/scroll-up/Scroll";
 
 const Blog = () => {
   return (
-    <div>Blog</div>
+    <>
+      <Scroll/>    
+    </>
+
   )
 }
 
