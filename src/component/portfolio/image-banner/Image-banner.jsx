@@ -9,9 +9,11 @@ const ImageBanner = () => {
     }, []);
     
     return (
-        <div className='portfolio-banner px-10'>
-            <img src={ImageIBanner} alt="portfolio" />
-        </div>
+        <>
+            <div className='portfolio-banner px-10'>
+                <img src={ImageIBanner} alt="portfolio" />
+            </div>
+        </>
     );
   };
 

@@ -8,6 +8,10 @@ import "aos/dist/aos.css";
 import Button from '../../button/Button';
 
 const HomeAboutUs = () => {
+  const toAboutUs = () => {
+      window.location.href = '/about';
+  };
+
     const imageHolderRef = useRef(null);
     let currentRotateX = 0;
     let currentRotateY = 0;
@@ -109,7 +113,7 @@ const HomeAboutUs = () => {
                     </div>
                 ))}
             </div>
-            <Button>Get In Touch</Button>
+            <Button onClick={toAboutUs}>Get In Touch</Button>
         </div>
         <div className="col-xxl-6 col-xl-6 col-lg-6 half-container" data-aos="fade-up" data-aos-duration="1000">
             <div className='image-holder mt-10' ref={imageHolderRef}>
