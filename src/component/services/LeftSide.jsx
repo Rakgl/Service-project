@@ -1,7 +1,7 @@
 const LeftSide = () => {
   return (
     <div className="leftside">
-
+        
     </div>
   )
 }

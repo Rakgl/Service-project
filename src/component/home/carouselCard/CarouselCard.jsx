@@ -1,6 +1,5 @@
 import './CarouselStyle.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import "./CarouselStyle.scss"
 import { Autoplay } from 'swiper/modules';
 import img1 from "../../../assets/home/1-white.png"
 import img2 from "../../../assets/home/2-white.png"
@@ -19,8 +18,8 @@ const CarouselCard = () => {
             modules={[Autoplay]}
              slidesPerView="auto"
             autoplay={{
-              delay: 3000, // Time between slides (in ms)
-              disableOnInteraction: false, // Continue auto-sliding after user interaction
+              delay: 3000,
+              disableOnInteraction: false,
             }}
             spaceBetween={10}
             loop={true}

@@ -1,11 +1,9 @@
-import LeftSide from "../component/services/LeftSide";
-import RightSide from "../component/services/RightSide";
 import Scroll from "../component/scroll-up/Scroll";
+import FullService from "../component/services/FullService";
 const Service = () => {
   return (
     <div>
-      <LeftSide/>
-      <RightSide/>
+      <FullService/>
       <Scroll/>
     </div>
   );
