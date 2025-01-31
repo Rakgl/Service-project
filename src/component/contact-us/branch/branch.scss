@@ -1,0 +1,102 @@
+.branch{
+    .mt-5{
+        margin-top: 100px !important;
+    }
+    .row{
+        margin-top: 60px;
+        justify-content: space-between;
+        .boxie{
+            text-align: left;
+            width: 450px;
+            height: 400px;
+            border-top: 4px solid #09AFF4;
+            border-right: 1px solid #09AFF4;
+            border-bottom: 1px solid #09AFF4;
+            border-left: 1px solid #09AFF4;
+            border-radius: 0 0 10px 10px;
+            .mt-4{
+                margin-top: 40px !important;
+            }
+            h4{
+                text-decoration: underline;
+                text-decoration-color: #09AFF4;
+                text-decoration-thickness: 2px;
+            }
+            p{
+                margin-top: 27px;
+                font-size: 22px;
+            }
+            .small-box{
+                width: 100%;
+                height: 60px;
+                display: flex;
+                .left{
+                    width: 60px;
+                    height: 60px;
+                    margin-right: 10px;
+                    font-size: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #09AFF4;
+                    background-color: #062241;
+                }
+                .right{
+                    h5{
+                        color: #09AFF4;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1355px) {
+.branch{
+    .row{
+        .boxie{
+            width: 350px;
+            height: 380px;
+            .mt-4{
+                margin-top: 40px !important;
+            }
+            .small-box{
+                height: 50px;
+                .nata{
+                    margin-top: -8px;
+                }
+                .left{
+                    width: 50px;
+                    height: 50px;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+}
+
+@media screen and (max-width: 1255px) {
+    .branch{
+        .row{
+            display: grid;
+            justify-content: center ;
+            .boxie{
+                margin-bottom: 20px;
+                width: 450px;
+                height: 380px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 515px) {
+    .branch{
+        .row{
+            .boxie{
+                width: 300px;
+            }
+        }
+    }
+
+}

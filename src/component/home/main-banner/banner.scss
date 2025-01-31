@@ -38,10 +38,10 @@
 
 // Star generation function
 @function generateStars($n) {
-  $value: '0 #{math.random(2000)}px #{math.random(2000)}px #FFF';
+  $value: '0 #{math.random(2000)}px #{math.random(2000)}px ';
 
   @for $i from 2 through $n {
-    $value: '#{$value} , #{math.random(2000)}px #{math.random(2000)}px #FFF';
+    $value: '#{$value} , #{math.random(2000)}px #{math.random(2000)}px ';
   }
 
   @return string.unquote($value);
@@ -64,7 +64,7 @@ $stars-big: generateStars(100);
       left: 0;
       height: 100%;
       width: 100%;
-      background: radial-gradient(ellipse at bottom, #171A34 0%, #171A34 100%);
+      // background: radial-gradient(ellipse at bottom, #171A34 0%, #171A34 100%);
       z-index: -1;
     }
   
@@ -123,7 +123,6 @@ $stars-big: generateStars(100);
       margin-bottom: 0;
     }
     h1{
-      color: white;
       margin-top: 0px;
       font-size: 70px;
       font-weight: 900;
@@ -131,7 +130,6 @@ $stars-big: generateStars(100);
     p{
       width: 550px;
       font-size: 20px;
-      color: #BCBCC4;
     }
     .image-holder {
       width: 655px;
@@ -162,7 +160,7 @@ $stars-big: generateStars(100);
     }
 
     .line-icon{
-      color: white;
+      color: #09AFF4;
       width: 170px;
       font-size: 22px;
     }
