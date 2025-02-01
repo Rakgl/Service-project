@@ -1,0 +1,32 @@
+form{
+    span{
+        color: red;
+    }
+    .form-control{
+        border: 1px solid #09AFF4;
+        border-radius: 0 !important;
+        height: 50px !important;
+        background-color: rgba(255, 0, 0, 0) !important;
+    }
+    .big-form{
+        height: 200px !important;
+    }
+}
+
+@media screen and (max-width: 1355px) {
+    .pt-10{
+      padding-top: 100px;
+    }
+  }
+  @media screen and (max-width: 1220px) {
+    .px-10{
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+  @media screen and (max-width: 993px) {
+    .px-10{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
