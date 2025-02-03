@@ -1,67 +1,88 @@
 .media {
-    width: 100%;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
     gap: 1rem;
+    padding: 0 100px;
 }
 
 .leftside {
     grid-column: span 8;
-    
-    img{
-        width: 100%;
-        height: 350px;
-        border-radius: 10px;
-    }
-    p{
+    p {
         font-size: 20px;
     }
-    .col{
-        display: flex;
-        gap: 1rem;
+}
+.bigimg{
+    width: 100%;
+}
+.col {
+    display: flex;
+    gap: 1rem;
+}
+
+.cover {
+    object-fit: cover;
+    height: 240px;
+    width: 50%;
+    border-radius: 5px;
+}
+
+/* Four Box Section */
+.fourBox {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 1rem;
+}
+
+.box {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    grid-column: span 5;
+
+    h1 {
+        font-size: 50px;
+        font-weight: bold;
+        color: #007bff;
+        line-height: 1;
     }
-    .cover{
-        object-fit: contain;
-        height: 240px;
-        border-radius: 5px;
+    h4 {
+        margin-bottom: 1rem;
     }
-    .fourBox{
-        display: grid;
-        grid-template-columns: repeat(10, 1fr);
-        grid-template-rows: 2;
-    }
-    .box{
-        display: flex;
-        gap: 2rem;
-        padding: 1rem;
-        grid-column: span 5;
-        h1{
-            font-size: 50px;
-            font-weight: bold;
-            color: #007bff;
-            line-height: 1;
-        }
-        h4{
-            margin-bottom: 1rem;
-        }
-        p{
-            color: gray;
-            font-size: 14px;
-        }
+    
+    p {
+        color: gray;
+        font-size: 14px;
     }
 }
 
 .rightside {
     grid-column: span 4;
-    background-color: yellowgreen;
+    .right_item{
+        background-color: #1285BF;
+        border-radius: 5px;
+        padding: 2rem;
+        h4{
+            margin-bottom: 1rem;
+        }
+        li{
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            padding: 10px 15px;
+            background-color: black;
+        }
+    }
 }
+
+
+
+
 
 @media (max-width: 1024px) {
     .media {
         grid-template-rows: auto;
     }
-
+    
     .leftside {
         grid-column: span 12;
     }
@@ -69,10 +90,33 @@
     .rightside {
         grid-column: span 12;
     }
+
 }
 @media (max-width: 768px){
-    .col{
+    .media{
+        padding: 0 20px;
+    }
+    .col {
         flex-direction: column;
         gap: 1rem;
+    }
+    .cover {
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+@media (max-width: 640px) {
+    .leftside img {
+        height: auto; 
+        max-height: 300px; 
+    }
+    .fourBox {
+        grid-template-columns: 1fr; 
+        grid-template-rows: repeat(4, auto);
+    }
+    
+    .box {
+        grid-column: span 12;
     }
 }

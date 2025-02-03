@@ -6,7 +6,7 @@ import img2 from '../../assets/service/service-single-img-col-2.jpg'
 const LeftSide = () => {
   return (
     <div className="leftside">
-      <img src={img} alt="img" />
+      <img src={img} alt="" className='bigimg' />
       <h2 className='py-4'>Information Security services we offer</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quidem debitis ad dolorum assumenda exercitationem fuga sequi, sit repellat fugit voluptate numquam animi in quos, voluptas culpa! Nobis dolorum ut tempora nam molestiae velit nostrum! Voluptas velit accusamus alias odio?</p>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quidem debitis ad dolorum assumenda exercitationem fuga sequi, sit repellat fugit voluptate numquam animi in quos, voluptas culpa! Nobis dolorum ut tempora nam molestiae</p>
