@@ -1,12 +1,13 @@
 import RightSide from "./RightSide"
 import LeftSide from "./LeftSide"
+import "./serviceStyle.css"
 
 const FullService = () => {
   return (
-    <div className="flex">
-      <RightSide/>
+    <main className="px-10 py-5 media">
       <LeftSide/>
-    </div>
+      <RightSide/>
+    </main>
   )
 }
 

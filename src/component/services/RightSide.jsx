@@ -1,3 +1,4 @@
+import "./serviceStyle.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faMagnifyingGlass, faChartLine, faMobileAlt, faDatabase, faTable, faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
 
