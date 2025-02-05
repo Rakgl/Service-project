@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './header.scss';
 import LogoLight from '../../assets/logo-light.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
   const [theme, setTheme] = useState('light');
@@ -51,11 +53,7 @@ const Header = () => {
         <nav className="navbar navbar-expand-lg">
           <div className="container-fluid">
             <Link className="navbar-brand" to="/app">
-              <img
-                src={LogoLight}
-                alt="Logo"
-                style={{ height: '40px' }}
-              />
+              <img src={LogoLight} alt="Logo" style={{ height: '40px' }} />
             </Link>
             <button
               className="navbar-toggler"
@@ -107,8 +105,13 @@ const Header = () => {
                     theme === 'light' ? 'btn-dark' : 'btn-light'
                   }`}
                   onClick={saveTheme}
+                  aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
                 >
-                  {theme === 'dark' ? 'Light' : 'Dark'}
+                  <FontAwesomeIcon
+                    icon={theme === 'light' ? faMoon : faSun}
+                    style={{ marginRight: '8px' }}
+                  />
+                  
                 </button>
               </ul>
             </div>

@@ -9,6 +9,11 @@ import {
   faInstagram,
   faXTwitter,
 } from '@fortawesome/free-brands-svg-icons';
+import { 
+  faEnvelope, 
+  faPhone ,
+  faLocationDot
+} from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => {
   return (
@@ -138,11 +143,11 @@ const Footer = () => {
             </div>
 
             {/* Contact Information */}
-            <div className="col-lg-2 col-md-4 useful-links">
+            <div className="col-lg-2 col-md-2 useful-links">
               <h5>Contact Information</h5>
               <ul className="list-unstyled">
                 <li className="mt-4">
-                  <FontAwesomeIcon className="icon" icon={faArrowRight} />
+                  <FontAwesomeIcon className="icon" icon={faEnvelope} />
 
                   <Link
                     to="/branding"
@@ -152,7 +157,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <FontAwesomeIcon className="icon" icon={faArrowRight} />
+                  <FontAwesomeIcon className="icon" icon={faPhone} />
 
                   <Link
                     to="/design"
@@ -162,7 +167,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <FontAwesomeIcon className="icon" icon={faArrowRight} />
+                <FontAwesomeIcon className='icon' icon={faLocationDot} />
 
                   <Link
                     to="/marketing"
