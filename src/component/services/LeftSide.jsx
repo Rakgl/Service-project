@@ -1,9 +1,26 @@
-import './serviceStyle.css'
+import './serviceStyle.scss'
+import { useState } from 'react';
 import img from "../../assets/service/service-single-featured-img.jpg"
 import img1 from '../../assets/service/service-single-img-col-1.jpg'
 import img2 from '../../assets/service/service-single-img-col-2.jpg'
 
 const LeftSide = () => {
+    const [activeIndex, setActiveIndex] = useState(null);
+    const faqs = [
+      { question: 'Are Your Service Easy To Use?', answer: 'mhmd, Anim fficia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table.' },
+      { question: 'Will I Receive Future Update?', answer: 'mhmd, Ah life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table.' },
+      { question: 'Is This Services Work In My Country?', answer: 'mhmd, Anim pariatur clirry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table.' },
+      { question: 'How Much I will Pay?', answer: 'mhmd, Anim pariatur cliche reprehenderit, enim eiusmod high life acaute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table.' },
+    ];
+
+    const handleClick = (index) => {
+      if (index === activeIndex) {
+        setActiveIndex(null);
+      } else {
+        setActiveIndex(index);
+      }
+    };
+
   return (
     <div className="leftside">
       <img src={img} alt="" className='bigimg' />
@@ -48,10 +65,22 @@ const LeftSide = () => {
         </div>
       </div>    
       <div>
-        <h2>Most Asked Questions</h2>
+        <h2 className='mb-4'>Most Asked Questions</h2>
+        <div className="faq-container">
+          {faqs.map((faq, index) => (
+            <div key={index} className="faq-item">
+              <button className="faq-question" onClick={() => handleClick(index)}>
+                {faq.question}
+              </button>
+              <div className={`faq-answer ${activeIndex === index ? 'active' : ''}`}>
+                <p className='p-2 font-sizePx14'>{faq.answer}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default LeftSide
+export default LeftSide;

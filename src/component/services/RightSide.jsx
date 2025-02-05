@@ -1,4 +1,4 @@
-import "./serviceStyle.css";
+import "./serviceStyle.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
   faCode, faMagnifyingGlass, faChartLine, 
@@ -30,7 +30,6 @@ const RightSide = () => {
             ))}
           </ul>
         </section>
-
         <section className="right_item">
           <h4>Download Assets</h4>
           <p className="font-sizePx14">

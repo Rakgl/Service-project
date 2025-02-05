@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faMagnifyingGlass, faChartLine, faMobileAlt, faDatabase,faTable } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
 import './service.scss';
+import Button from '../../button/Button';
 
 const ServiceOffer = () => {
   const serviceOffer = [
@@ -53,7 +54,7 @@ const ServiceOffer = () => {
             <h1>Services We Offer</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias itaque minima commodi, repudiandae facere adipisci voluptatibus corporis nobis perferendis iste.</p>
           </div>
-          <button type="button" className="heightPx-50 btn btn-primary">See all services</button>
+          <Button >See all services</Button>
         </div>
         <div className="grid-container" data-aos="fade-up" data-aos-duration="1000">
           {serviceOffer.map((data) => (

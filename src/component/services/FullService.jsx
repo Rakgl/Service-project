@@ -1,6 +1,6 @@
 import RightSide from "./RightSide"
 import LeftSide from "./LeftSide"
-import "./serviceStyle.css"
+import "./serviceStyle.scss"
 
 const FullService = () => {
   return (
