@@ -22,7 +22,9 @@
                     font-size: 25px;
                     margin-right: 20px;
                     border-radius: 5px;
-                    padding: 5px 0 0 0;
+                    display: flex !important;
+                    justify-content: center !important;
+                    align-items: center !important;
                     color: #09AFF4;
                     transition: 0.4s;
                     background-color: #072E51;

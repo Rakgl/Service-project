@@ -11,6 +11,10 @@ form{
     .big-form{
         height: 200px !important;
     }
+    .custom-gap {
+      --bs-gutter-x: 15px;
+      --bs-gutter-y: 12px;
+    }
 }
 
 @media screen and (max-width: 1355px) {
