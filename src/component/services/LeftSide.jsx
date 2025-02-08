@@ -23,10 +23,16 @@ const LeftSide = () => {
       <div className="leftside">
         <img src={img} alt="" className='bigimg' />
         <h2 className='py-4'>Information Security services we offer</h2>
-        <p>Lorem ipsum dolor sit amet...</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quidem debitis ad dolorum assumenda exercitationem fuga sequi, sit repellat fugit voluptate numquam animi in quos, voluptas culpa! Nobis dolorum ut tempora nam molestiae velit nostrum! Voluptas velit accusamus alias odio?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quidem debitis ad dolorum assumenda exercitationem fuga sequi, sit repellat fugit voluptate numquam animi in quos, voluptas culpa! Nobis dolorum ut tempora nam molestiae</p>
         <div className='my-5 col'>
           <img src={img1} alt="" className='cover'/>
           <img src={img2} alt="" className='cover'/>
+        </div>
+        <div>
+          <h1>Information Security services we offer</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quidem debitis ad dolorum assumenda exercitationem fuga sequi, sit repellat fugit voluptate numquam animi in quos, voluptas culpa! Nobis dolorum ut tempora nam molestiae velit nostrum! Voluptas velit accusamus alias odio?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quidem debitis ad dolorum assumenda exercitationem fuga sequi, sit repellat fugit voluptate numquam animi in quos, voluptas culpa! Nobis dolorum ut tempora nam molestiae</p>
         </div>
         <h2 className='pb-4'>Most Asked Questions</h2>
         <div className="faq-container">

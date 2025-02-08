@@ -61,7 +61,7 @@
   grid-column: span 4;
   .right {
     position: sticky;
-    top: 150px;
+    top: 80px;
   }
   .right_item {
     background-color: #1285bf;
@@ -93,13 +93,13 @@
       transition: 0.3s;
     }
 
-    li:first-child {
+    .services-list li:first-child {
       background-color: black;
       opacity: 1;
       pointer-events: none;
     }
 
-    li .fa-arrow-right-long {
+    .services-list li .fa-arrow-right-long {
       opacity: 0;
       transform: translateX(0);
       transition:
@@ -112,11 +112,11 @@
       transform: translateX(10px);
     }
 
-    li:first-child .fa-arrow-right-long {
+    .services-list li:first-child .fa-arrow-right-long {
       opacity: 1;
     }
 
-    li:first-child:hover .fa-arrow-right-long {
+    .services-list li:first-child:hover .fa-arrow-right-long {
       transform: translateX(0);
     }
   }
