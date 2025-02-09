@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import './banner.scss';
 import banner from '../../assets/blog/image-banner.jpg';
 import Subbanner from '../../assets/blog/image.png';
+import Sub1Banner from '../../assets/blog/image-3.png';
+import profile from '../../assets/blog/profile.png';
+import Button from '../button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faFacebook,
@@ -9,6 +12,8 @@ import {
   faInstagram,
   faXTwitter,
 } from '@fortawesome/free-brands-svg-icons';
+
+// import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 
 const Banner = () => {
   const [items, setItems] = useState([
@@ -18,23 +23,26 @@ const Banner = () => {
     'Team Empowerment: Create a supportive environment for team growth and development.',
     'Positive Impact: Promote sustainability, ethics, and social responsibility in all endeavors.',
   ]);
+  const socialMedia = [
+    { icon: faFacebook, bg: 'bg-blue-600', hover: 'hover:bg-blue-700' },
+    { icon: faYoutube, bg: 'bg-blue-600', hover: 'hover:bg-blue-700' },
+    { icon: faInstagram, bg: 'bg-blue-600', hover: 'hover:bg-blue-600' },
+    { icon: faXTwitter, bg: 'bg-blue-600', hover: 'hover:bg-blue-800' },
+  ];
   return (
     <>
       <div className="center">
-        <div className="text-icon">
-          <p>SHARE POST: </p>
-
-          <div className="box">
-            <FontAwesomeIcon icon={faFacebook} />
-          </div>
-          <div className="box">
-            <FontAwesomeIcon icon={faYoutube} />
-          </div>
-          <div className="box">
-            <FontAwesomeIcon icon={faInstagram} />
-          </div>
-          <div className="box">
-            <FontAwesomeIcon icon={faXTwitter} />
+        <div className="flex items-center space-x-4">
+          <div className="text-icon">
+            <p className="font-semibold">SHARE POST:</p>
+            {socialMedia.map((platform, index) => (
+              <div
+                key={index}
+                className={`box ${platform.bg} ${platform.hover}`}
+              >
+                <FontAwesomeIcon icon={platform.icon} />
+              </div>
+            ))}
           </div>
         </div>
         <h1 className="banner-title">
@@ -76,7 +84,6 @@ const Banner = () => {
           <h2 className="banner-title">
             Interested enough? you just on the shore let's dive deep
           </h2>
-
           <p className="text">
             At Flex-IT, we’re not just about meeting expectations—we’re about
             redefining them. Our first and foremost goal is to deliver
@@ -99,6 +106,99 @@ const Banner = () => {
             At Flex-IT, we’re not just building a business—we’re building a
             legacy.
           </p>
+
+
+          {/* <img className='img-sub' src={Sub1Banner} alt="Sub1Banner" /> */}
+
+          {/* <div className="box-text mt-5 p-3">
+            <FontAwesomeIcon
+              icon={faQuoteLeft}
+              className="p-3 text-blue-500 fs-1 qoute-text"
+            />
+            <p className="text fs-3 p-3">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Perspiciatis odit repellendus sint assumenda quae laborum
+            </p>
+          </div> */}
+
+          <div className="box-text mt-5 p-4">
+            <h3>Mohamed amin</h3>
+            <div className="d-flex justify-content-between align-items-center gap-3">
+              <div className="cricle">
+                <img src={profile} alt="Profile" />
+              </div>
+              <div className="text-profile">
+                <p className="text mt-3">
+                  Sophat is a passionate software engineer and the founder of
+                  ADITI Co., Ltd, a company specializing in software solutions,
+                  digital transformation, and engineering outsourcing. With a
+                  strong commitment to delivering high-quality, customized
+                  software, Sophat collaborates with businesses—particularly
+                  Japanese companies—to create seamless outsourcing experiences.
+                  His expertise spans Laravel, Next.js, Nuxt 3, Flutter, and
+                  more, ensuring innovative and scalable solutions for clients
+                  worldwide.
+                </p>
+
+                <div className="text-icon">
+                  {socialMedia.map((platform, index) => (
+                    <div
+                      key={index}
+                      className={`box ${platform.bg} ${platform.hover}`}
+                    >
+                      <FontAwesomeIcon icon={platform.icon} />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="form px-10 mt-5">
+            <h1 className="text-center">
+              <b>Have Any Question? Let Answer Them</b>
+            </h1>
+            <form action="" className="mt-4 mb-5">
+              <div className="row custom-gap">
+                <div className="col-md-6 col-sm-12">
+                  <label>
+                    <b>
+                      Name <span>*</span>
+                    </b>
+                  </label>
+                  <input type="text" className="form-control mt-2" />
+                </div>
+                <div className="col-md-6 col-sm-12">
+                  <label>
+                    <b>
+                      Email <span>*</span>
+                    </b>
+                  </label>
+                  <input type="text" className="form-control mt-2" />
+                </div>
+                <div className="col-12">
+                  <label>
+                    <b>
+                      Subject <span>*</span>
+                    </b>
+                  </label>
+                  <input type="text" className="form-control mt-2" />
+                </div>
+                <div className="col-12">
+                  <label>
+                    <b>
+                      Your Message <span>*</span>
+                    </b>
+                  </label>
+                  <textarea
+                    className="form-control big-form mt-2"
+                    aria-label="With textarea"
+                  ></textarea>
+                </div>
+              </div>
+            </form>
+            <Button>Sent Your Message</Button>
+          </div>
         </div>
       </div>
     </>

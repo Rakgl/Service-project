@@ -63,12 +63,12 @@ const RunningNum = () => {
   }, [hasStarted]);
 
   return (
-    <div ref={sectionRef} className=" background">
+    <div ref={sectionRef} className=" background ">
       <div className='opa'>
         {counters.map((counter, index) => (
           <div
             key={counter.id}
-            className="heightPx widthPx-230 borderr columnCC text-white text-center mr-4 "
+            className="heightPx widthPx-230 borderr columnCC text-white text-center mr-4"
           >
             <div className='font-lg text-primary'>{counter.icon}</div>
             <div id="counter" className="fontlg font-weight text-white">
