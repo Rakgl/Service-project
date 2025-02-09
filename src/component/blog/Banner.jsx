@@ -74,8 +74,31 @@ const Banner = () => {
           </ul>
 
           <h2 className="banner-title">
-            interested enough? you just on the shore let's dive deep
+            Interested enough? you just on the shore let's dive deep
           </h2>
+
+          <p className="text">
+            At Flex-IT, we’re not just about meeting expectations—we’re about
+            redefining them. Our first and foremost goal is to deliver
+            exceptional client experiences, where every interaction is tailored
+            to your unique needs and every solution is designed to propel you
+            toward success. Innovation and creativity are the lifeblood of our
+            firm; we constantly push boundaries, embrace cutting-edge
+            technologies, and challenge the status quo to ensure that we’re not
+            just keeping up with the industry but leading it. But our vision
+            goes beyond transactions—we’re here to build long-term partnerships
+            rooted in trust, transparency, and mutual growth. We believe that
+            your success is our success, and we’re committed to walking this
+            journey with you. Equally important is our dedication to empowering
+            our team. We foster a culture of collaboration, inclusivity, and
+            continuous learning because we know that a motivated and skilled
+            team is the foundation of everything we do. Finally, we’re driven by
+            a deeper purpose: to make a positive impact. Whether it’s through
+            sustainable practices, ethical decision-making, or community
+            initiatives, we strive to leave the world better than we found it.
+            At Flex-IT, we’re not just building a business—we’re building a
+            legacy.
+          </p>
         </div>
       </div>
     </>
