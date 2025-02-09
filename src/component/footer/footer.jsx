@@ -9,10 +9,10 @@ import {
   faInstagram,
   faXTwitter,
 } from '@fortawesome/free-brands-svg-icons';
-import { 
-  faEnvelope, 
-  faPhone ,
-  faLocationDot
+import {
+  faEnvelope,
+  faPhone,
+  faLocationDot,
 } from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => {
@@ -167,7 +167,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                <FontAwesomeIcon className='icon' icon={faLocationDot} />
+                  <FontAwesomeIcon className="icon" icon={faLocationDot} />
 
                   <Link
                     to="/marketing"
@@ -176,7 +176,7 @@ const Footer = () => {
                     123, New York, USA
                   </Link>
                 </li>
-                <div className="line-icon mt-5 d-flex justify-content-between">
+                <div className="line-icon mt-5 d-flex flex-colum gap-3">
                   <div className="box">
                     <FontAwesomeIcon icon={faFacebook} />
                   </div>
@@ -193,7 +193,7 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-
+          
           <div className="d-flex justify-content-between mt-5">
             <p className="mb-0">&copy; 2025 Created by Rak</p>
             <p>Terms of use | Privacy Policy</p>

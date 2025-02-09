@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './banner.scss';
 import banner from '../../assets/blog/image-banner.jpg';
 import Subbanner from '../../assets/blog/image.png';
@@ -11,6 +11,13 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 const Banner = () => {
+  const [items, setItems] = useState([
+    'Exceptional Client Experiences: Exceed expectations with tailored solutions and outstanding service.',
+    'Innovation and Creativity: Embrace cutting-edge technologies and foster a culture of innovation.',
+    'Long-Term Partnerships: Build trust-based, lasting relationships with clients and stakeholders.',
+    'Team Empowerment: Create a supportive environment for team growth and development.',
+    'Positive Impact: Promote sustainability, ethics, and social responsibility in all endeavors.',
+  ]);
   return (
     <>
       <div className="center">
@@ -35,7 +42,7 @@ const Banner = () => {
         </h1>
         <img src={banner} alt="banner" />
         <div className="content mt-3">
-          <p className='text'>
+          <p className="text">
             Welcome to the blog of Flex IT, where innovation meets excellence!
             Our awesome firm is dedicated to delivering cutting-edge solutions
             and unparalleled expertise in . Through this blog, we aim to share
@@ -48,10 +55,10 @@ const Banner = () => {
             in Flex IT—because your success is our mission!
           </p>
 
-          <h2>About our awesome firm</h2>
+          <h2 className="banner-title">About our awesome firm</h2>
           <img src={Subbanner} alt="Subanner" />
 
-          <p className='mt-3 text'>
+          <p className="mt-3 text">
             In today’s fast-paced digital world, businesses need cutting-edge
             solutions and a team that truly understands their needs. At Our
             Awesome Firm, we specialize in delivering top-notch services,
@@ -59,29 +66,39 @@ const Banner = () => {
             strategic solutions, and unwavering commitment to excellence.
           </p>
 
-          <h2>Some Of our goals in our firm</h2>
+          <h2 className="banner-title">Some Of our goals in our firm</h2>
           <ul>
-            <li>
-              Exceptional Client Experiences: Exceed expectations with tailored
-              solutions and outstanding service.
-            </li>
-            <li>
-              Innovation and Creativity: Embrace cutting-edge technologies and
-              foster a culture of innovation.
-            </li>
-            <li>
-              Long-Term Partnerships: Build trust-based, lasting relationships
-              with clients and stakeholders.
-            </li>
-            <li>
-              Team Empowerment: Create a supportive environment for team growth
-              and development.
-            </li>
-            <li>
-              Positive Impact: Promote sustainability, ethics, and social
-              responsibility in all endeavors.
-            </li>
+            {items.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
           </ul>
+
+          <h2 className="banner-title">
+            Interested enough? you just on the shore let's dive deep
+          </h2>
+
+          <p className="text">
+            At Flex-IT, we’re not just about meeting expectations—we’re about
+            redefining them. Our first and foremost goal is to deliver
+            exceptional client experiences, where every interaction is tailored
+            to your unique needs and every solution is designed to propel you
+            toward success. Innovation and creativity are the lifeblood of our
+            firm; we constantly push boundaries, embrace cutting-edge
+            technologies, and challenge the status quo to ensure that we’re not
+            just keeping up with the industry but leading it. But our vision
+            goes beyond transactions—we’re here to build long-term partnerships
+            rooted in trust, transparency, and mutual growth. We believe that
+            your success is our success, and we’re committed to walking this
+            journey with you. Equally important is our dedication to empowering
+            our team. We foster a culture of collaboration, inclusivity, and
+            continuous learning because we know that a motivated and skilled
+            team is the foundation of everything we do. Finally, we’re driven by
+            a deeper purpose: to make a positive impact. Whether it’s through
+            sustainable practices, ethical decision-making, or community
+            initiatives, we strive to leave the world better than we found it.
+            At Flex-IT, we’re not just building a business—we’re building a
+            legacy.
+          </p>
         </div>
       </div>
     </>
