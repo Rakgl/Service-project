@@ -45,12 +45,11 @@ $badge-bg: #3b83f6e3;
     display: flex;
     justify-content: center;
     gap: 16px;
-    flex-wrap: wrap;
 
     .plan-card {
-      padding: 24px;
+      padding: 25px;
       border-radius: 8px;
-      width: 410px;
+      width: 350px;
       height: auto;
       text-align: center;
       position: relative;

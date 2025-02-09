@@ -193,9 +193,9 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          
+
           <div className="d-flex justify-content-between mt-5">
-            <p className="mb-0">&copy; 2025 Created by Rak</p>
+            <p className="mb-0">&copy; 2025 Created</p>
             <p>Terms of use | Privacy Policy</p>
           </div>
         </div>
