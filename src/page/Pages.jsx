@@ -19,6 +19,7 @@ const Pages = () => {
       <TestiMo/>
       <CarouselCard />
       <ContactBanner/>
+        
       <Scroll />
     </>
   );

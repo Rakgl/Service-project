@@ -5,6 +5,9 @@ import {
   faMobileAlt, faDatabase, faTable, 
   faArrowRightLong, faDownload,
 } from "@fortawesome/free-solid-svg-icons";
+import {
+  faXTwitter,
+} from '@fortawesome/free-brands-svg-icons';
 import { faFacebook,faInstagram,faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 
@@ -55,6 +58,11 @@ const RightSide = () => {
             <li>
               <a href="">
               <FontAwesomeIcon icon={faFacebook} />
+              </a>
+            </li>
+            <li>
+              <a href="">
+              <FontAwesomeIcon icon={faXTwitter} />
               </a>
             </li>
             <li>

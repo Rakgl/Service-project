@@ -67,7 +67,7 @@ const PricingPlans = () => {
 
   return (
     <section
-      className="pricing-plans"
+      className="pricing-plans px-10"
       data-aos="fade-up"
       data-aos-duration="1000"
     >
