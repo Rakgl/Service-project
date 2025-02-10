@@ -3,7 +3,7 @@ import './LatestNews.scss';
 import image1 from '../../../assets/1.jpg';
 import image2 from '../../../assets/2.jpg';
 import image3 from '../../../assets/3.jpg';
-import AOS from "aos";
+import Button from '../../button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookmark } from '@fortawesome/free-regular-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
@@ -47,7 +47,7 @@ const LatestNews = () => {
           <h2 className="section-title">Latest News</h2>
         </div>
         <div className="see-all-posts">
-          <a href="#" className="see-all-button">See All Posts →</a>
+          <Button>See All Posts →</Button>
         </div>
       </div>
       <div className="article-container">

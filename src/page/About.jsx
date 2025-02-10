@@ -16,7 +16,9 @@ const AboutPage = () => {
         ]}/>
         <HomeAboutUs/>
         <LatestNews/>
-        <TestiMo/>
+        <div style={{marginBottom: '-49px'}}>
+          <TestiMo/>
+        </div>
         <Scroll/>
       </div>
     </>

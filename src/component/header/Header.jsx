@@ -109,7 +109,6 @@ const Header = () => {
                 >
                   <FontAwesomeIcon
                     icon={theme === 'light' ? faMoon : faSun}
-                    style={{ marginRight: '8px' }}
                   />
                   
                 </button>
