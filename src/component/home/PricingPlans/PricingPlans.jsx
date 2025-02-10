@@ -8,6 +8,7 @@ import {
   faGears,
   faUserSecret,
 } from '@fortawesome/free-solid-svg-icons';
+import Button from '../../button/Button';
 const PricingPlans = () => {
   const plans = [
     {
@@ -80,9 +81,7 @@ const PricingPlans = () => {
           </p>
         </div>
         <div className="see-all-plans">
-          <a href="#" className="see-all-button">
-            See All Plans →
-          </a>
+          <Button>See All Plans →</Button>
         </div>
       </div>
       <div className="container">
