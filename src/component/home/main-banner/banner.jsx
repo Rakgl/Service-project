@@ -70,10 +70,18 @@ const MainBanner = () => {
 
           <div className='col-xl-6 col-lg-5 col-sm-12 banner-side pt-10'>
             <div className='line-icon d-flex justify-content-between'>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faFacebook} />
+            </a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faYoutube} />
+            </a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faInstagram} />
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faXTwitter} />
+            </a>
             </div>
             <div className='mt-3'>
               <h6><FontAwesomeIcon icon={faGgCircle} />&nbsp;&nbsp;IT SOLUTION&nbsp;&nbsp;<FontAwesomeIcon icon={faGgCircle} /></h6>
